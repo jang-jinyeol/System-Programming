@@ -10,7 +10,7 @@ int main(int argc, char const *argv[]) {
 
     char cwd[MAX_PATH_LEN + 1] = { '\0', }; //NULL로 초기화
 
-    if (getcwd(cwd, MAX_PATH_LEN) == NULL) { //getcwd는 오류가 발생하면 NULL을 리턴한다.
+    if (getcwd(cwd, MAX_PATH_LEN) == NULL) { //getcwd는 오류가 발생하면 NULL을 리턴한다. 성공하면 주소를 리턴 char* tmp=getcwd(NULL,BUFSIZ)
         perror("getcwd() error!");
         exit(-1);
     }
