@@ -21,7 +21,7 @@ int main(int argc, char const * argv[]){
     }
 
     if(!S_ISDIR(fileInfo.st_mode)){ //디렉토리 파일이 아닐경우
-        fprintf(stderr,"%s is not directory!\n", argv[1]);
+        fprintf(stderr,"%s is not directory!\n", argv[1]); //stderr는 버퍼링 없이 바로 출력된다.printf는 개행문자(\n)가 한 줄의 끝으로 인식되어 표준출력의 버퍼링을 끝낸다
         exit(-1);
     }
 
