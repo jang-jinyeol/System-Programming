@@ -1,6 +1,12 @@
 //리눅스 한글
 //스크립트 작성
-//vscode에선 korean 설치
+/*
+vscode에서 한영전환 안될때
+
+$ sudo snap remove code(이미 설치된 snap 형식 제거)
+sudo dpkg -i code_1.58.2-1626302803_amd64.deb
+만약 설치중에 의존 라이브러리 없다고 나오면  sudo apt -f install
+*/
 //ibus-setup -> 입력기(input method)에서 한글 추가
 #!/bin/bash
 setkeycodes 72 122
