@@ -1,5 +1,6 @@
 //리눅스 한글
 //스크립트 작성
+//ibus-setup -> 입력기(input method)에서 한글 추가
 #!/bin/bash
 setkeycodes 72 122
 setkeycodes 71 123
@@ -31,4 +32,7 @@ $ sudo systemctl start hangul
 sudo systemctl status hangul(작동확인)
 
 재부팅
+
+
+참고 사이트 : https://omnil.tistory.com/155
 */
