@@ -1,19 +1,3922 @@
-<!doctype html>
-<html>
-<head>
-  <title>WEB1 - html</title>
-  <meta charset="utf-8">
-</head>
-<body>
-  <h1><a href="index.html">WEB</a></h1>
-  <ol>
-    <li><a href="1.html">HTML</a></li>
-    <li><a href="1.html">CSS</a></li>
-    <li><a href="1.html">JavaScript</a></li>
-  </ol>
-  <h2>HTML</h2>
-  <p><a href="https://www.w3.org/TR/html5/" target="_blank" title="html5 speicification">Hypertext Markup Language (HTML)</a> is the standard markup language for <strong>creating <u>web</u> pages</strong> and web applications.Web browsers receive HTML documents from a web server or from local storage and render them into multimedia web pages. HTML describes the structure of a web page semantically and originally included cues for the appearance of the document.
-  </p><p style="margin-top:45px;">HTML elements are the building blocks of HTML pages. With HTML constructs, images and other objects, such as interactive forms, may be embedded into the rendered page. It provides a means to create structured documents by denoting structural semantics for text such as headings, paragraphs, lists, links, quotes and other items. HTML elements are delineated by tags, written using angle brackets.
-  </p>
-</body>
-</html>
+<div class="se_component se_sectionTitle ">
+    <div class="se_sectionArea se_align-left">
+        <div class="se_editArea">
+            <div class="se_viewArea se_ff_nanumgothic se_fs_H1 "
+            			style="color: ;
+                        text-decoration: inherit;
+                        font-style: inherit;
+                        ">
+                <div class="se_editView">
+                    <div class="se_textView">
+                        <h4 class="se_textarea"><!-- SE3-TEXT { -->시그널의 개념 <!-- } SE3-TEXT --></h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+<div class="se_component se_paragraph default">
+    <div class="se_sectionArea">
+        <div class="se_editArea">
+            <div class="se_viewArea se_ff_nanumgothic se_fs_T3 se_align-left" >
+                <div class="se_editView">
+                    <div class="se_textView">
+                        <p class="se_textarea"><!-- SE3-TEXT { -->- 프로세스에 뭔가 발생했음을 알리는 간단한 메시지를 비동기적으로 보내는 것 <br>- 메시지는 무엇이 발생했는지를 표시하는 미리 정의된 상수를 사용 <!-- } SE3-TEXT --></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+<div class="se_component se_sectionTitle ">
+    <div class="se_sectionArea se_align-left">
+        <div class="se_editArea">
+            <div class="se_viewArea se_ff_nanumgothic se_fs_H1 "
+            			style="color: ;
+                        text-decoration: inherit;
+                        font-style: inherit;
+                        ">
+                <div class="se_editView">
+                    <div class="se_textView">
+                        <h4 class="se_textarea"><!-- SE3-TEXT { -->시그널의 발생 <!-- } SE3-TEXT --></h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+<div class="se_component se_paragraph default">
+    <div class="se_sectionArea">
+        <div class="se_editArea">
+            <div class="se_viewArea se_ff_nanumgothic se_fs_T3 se_align-left" >
+                <div class="se_editView">
+                    <div class="se_textView">
+                        <p class="se_textarea"><!-- SE3-TEXT { --><span>- 시그널은 소프트웨어 인터럽트 (주로 시스템콜을 사용하는 OS에서 정의한 API) <br></span><span>&nbsp; - 나누기0 과같은 프로그램에서 예외적인 상황이 일어나는 경우 </span><br>&nbsp; - 프로세스가 kill 함수와 같이 시그널을 보낼 수 있는 함수를 사용해 다른 프로세스에 시그널을 보내는 경우 <br>&nbsp; - 사용자가 Ctrl+C 같은 인터럽트 키를 입력하는 경우 <!-- } SE3-TEXT --></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+<div class="se_component se_sectionTitle ">
+    <div class="se_sectionArea se_align-left">
+        <div class="se_editArea">
+            <div class="se_viewArea se_ff_nanumgothic se_fs_H1 "
+            			style="color: ;
+                        text-decoration: inherit;
+                        font-style: inherit;
+                        ">
+                <div class="se_editView">
+                    <div class="se_textView">
+                        <h4 class="se_textarea"><!-- SE3-TEXT { -->시그널 처리 방법 <!-- } SE3-TEXT --></h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+<div class="se_component se_paragraph default">
+    <div class="se_sectionArea">
+        <div class="se_editArea">
+            <div class="se_viewArea se_ff_nanumgothic se_fs_T3 se_align-left" >
+                <div class="se_editView">
+                    <div class="se_textView">
+                        <p class="se_textarea"><!-- SE3-TEXT { -->- 프로세스가 받은 시그널에 따라 기본동작을 수행 각 시그널에는 기본동작이 지정되어 있음 <br>&nbsp; - 대부분 시그널의 기본동작은 프로세스를 종료 <br>&nbsp; - 시그널을 무시하거나 프로세스의 수행 일시 중지(Suspend)/재시작(Resume) 등을 기본동작으로 수행 <br>- 프로세스가 받는 시그널을 무시 (프로세스가 시그널을 무시하기로 지정하면 유닉스는 프로세스에 시그널을 전달하지 않음) <br>- 프로세스는 시그널의 처리를 위해 미리 함수를 지정(Signal Handler)해놓고 시그널을 받으면 해당 함수를 호출 (동작이 완료되면 기존 처리작업을 계속 수행) <br>- 프로세스는 특정 부분이 실행되는 동안 시그널이 발생하지 않도록 블록 할 수 있음(블록된 시그널은 큐에 쌓여 있다가 시그널 블록이 해제되면 전달) <!-- } SE3-TEXT --></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+<div class="se_component se_sectionTitle ">
+    <div class="se_sectionArea se_align-left">
+        <div class="se_editArea">
+            <div class="se_viewArea se_ff_nanumgothic se_fs_H1 "
+            			style="color: ;
+                        text-decoration: inherit;
+                        font-style: inherit;
+                        ">
+                <div class="se_editView">
+                    <div class="se_textView">
+                        <h4 class="se_textarea"><!-- SE3-TEXT { -->시그널 보내기 <!-- } SE3-TEXT --></h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+<div class="se_component se_paragraph default">
+    <div class="se_sectionArea">
+        <div class="se_editArea">
+            <div class="se_viewArea se_ff_nanumgothic se_fs_T3 se_align-left" >
+                <div class="se_editView">
+                    <div class="se_textView">
+                        <p class="se_textarea"><!-- SE3-TEXT { --><span>- 시그널 보내는 함수 <br></span><span>&nbsp; - kill() </span><br>&nbsp; - raise() <br>&nbsp; - abort() <span><br><br></span><span>- PID가 3255인 프로세스를 강제 종료하는 명령 </span><span><br></span><!-- } SE3-TEXT --></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="se_component se_code default" id="SEDOC-1512350174371--1649914949_code_0">
+    <div class="se_sectionArea">
+        <div class="se_editArea">
+            <div class="se_viewArea se_fs_T3 ">
+                <div class="se_editView" >
+                    <div class="se_textView">
+                        <div class="__se_code_view se_textarea language-javascript"># kill -9 3255 &#10;// kill SIGKILL 3255</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/data" class="__se_module_data" data-module='{"type":"v1_code", "docVersion" : "1.0", "id" :"SEDOC-1512350174371--1649914949_code_0" , "data" : { "baseElId" : "SEDOC-1512350174371--1649914949_code_0"}}'></script>
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+<div class="se_component se_sectionTitle ">
+    <div class="se_sectionArea se_align-left">
+        <div class="se_editArea">
+            <div class="se_viewArea se_ff_nanumgothic se_fs_H1 "
+            			style="color: ;
+                        text-decoration: inherit;
+                        font-style: inherit;
+                        ">
+                <div class="se_editView">
+                    <div class="se_textView">
+                        <h4 class="se_textarea"><!-- SE3-TEXT { -->시그널 보내기 함수 <!-- } SE3-TEXT --></h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+<div class="se_component se_paragraph default">
+    <div class="se_sectionArea">
+        <div class="se_editArea">
+            <div class="se_viewArea se_ff_nanumgothic se_fs_T3 se_align-left" >
+                <div class="se_editView">
+                    <div class="se_textView">
+                        <p class="se_textarea"><!-- SE3-TEXT { --><span>- 시그널 보내기&nbsp;: kill(2) <br></span><span></span><!-- } SE3-TEXT --></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="se_component se_code default" id="SEDOC-1512350174371--1649914949_code_1">
+    <div class="se_sectionArea">
+        <div class="se_editArea">
+            <div class="se_viewArea se_fs_T3 ">
+                <div class="se_editView" >
+                    <div class="se_textView">
+                        <div class="__se_code_view se_textarea language-javascript">#include &lt; sys/types.h &gt; &#10;#include &lt; signal.h &gt; &#10;int kill (pid_t pid, int sig); &#10;// pid : 시그널을 받을 프로세스 ID &#10;// sig : pid로 지정한 프로세스에 보내려는 시그널 </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/data" class="__se_module_data" data-module='{"type":"v1_code", "docVersion" : "1.0", "id" :"SEDOC-1512350174371--1649914949_code_1" , "data" : { "baseElId" : "SEDOC-1512350174371--1649914949_code_1"}}'></script>
+
+
+
+
+    
+
+
+
+
+
+
+
+
+<div class="se_component se_paragraph default">
+    <div class="se_sectionArea">
+        <div class="se_editArea">
+            <div class="se_viewArea se_ff_nanumgothic se_fs_T3 se_align-left" >
+                <div class="se_editView">
+                    <div class="se_textView">
+                        <p class="se_textarea"><!-- SE3-TEXT { --><span>- kill 함수는 pid에 대응하는 프로세스에 sig로 지정한 시그널을 보냄 <br></span><span>&nbsp; - pid는 특정 프로세스 또는 프로세스 그룹을 의미 </span><br>&nbsp; - sig에 0(널 시그널)을 지정하면 실제로 시그널을 보내지 않고 오류를 확인 (pid가 정상인지 검사) <br><span>- pid에 지정한 값에 따라 시그널을 어떻게 보낼 것인지를 결정 <br></span><span>&nbsp; - pid 가 0 보다 큰 수&nbsp;: pid로 지정한 프로세스에게 시그널을 보냄 </span><br>&nbsp; - pid 가 -1 이 아닌 음수&nbsp;: 프로세스 그룹 ID가 pid의 절대값인 프로세스 그룹에 속하고 시그널을 보낼 권한을 가지고 있는 모든 프로세스에게 시그널을 보냄 <br>&nbsp; - pid 가 0&nbsp;: 특별한 프로세스를 제외하고 프로세스 그룹ID가 시그널을 보내는 프로세스의 프로세스 그룹 ID와 같은 모든 프로세스에게 시그널을 보냄 <br>&nbsp; - pid 가 -1&nbsp;: 시그널을 보내는 프로세스의 유효 사용자 ID가 root가 아니면 특별한 프로세스를 제외하고 프로세스의 실제 사용자 ID가 시그널을 보내는 프로세스의 유효 사용자 ID와 같은 모든 프로세스에게 시그널 보냄 <br><br><span>- 시그널 보내기&nbsp;: raise(3) <br></span><span></span><!-- } SE3-TEXT --></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="se_component se_code default" id="SEDOC-1512350174371--1649914949_code_2">
+    <div class="se_sectionArea">
+        <div class="se_editArea">
+            <div class="se_viewArea se_fs_T3 ">
+                <div class="se_editView" >
+                    <div class="se_textView">
+                        <div class="__se_code_view se_textarea language-javascript">#include &lt; signal.h &gt; &#10;int raise (int sig); &#10;// sig : 보내려는 시그널 번호 </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/data" class="__se_module_data" data-module='{"type":"v1_code", "docVersion" : "1.0", "id" :"SEDOC-1512350174371--1649914949_code_2" , "data" : { "baseElId" : "SEDOC-1512350174371--1649914949_code_2"}}'></script>
+
+
+
+
+    
+
+
+
+
+
+
+
+
+<div class="se_component se_paragraph default">
+    <div class="se_sectionArea">
+        <div class="se_editArea">
+            <div class="se_viewArea se_ff_nanumgothic se_fs_T3 se_align-left" >
+                <div class="se_editView">
+                    <div class="se_textView">
+                        <p class="se_textarea"><!-- SE3-TEXT { --><span>- 호출한 프로세스에 인자로 지정한 시그널을 보냄 <br></span><span>&nbsp; - 핸들러가 호출되면 시그널 핸들러의 수행이 끝날 때ㅔ까지 raise 함수는 리턴하지 않음 </span><br>&nbsp; - 수행을 성공하면 0, 실패하면 -1을 리턴 <br><br><span>- 시그널 보내기&nbsp;: abort(3) <br></span><span></span><!-- } SE3-TEXT --></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="se_component se_code default" id="SEDOC-1512350174371--1649914949_code_3">
+    <div class="se_sectionArea">
+        <div class="se_editArea">
+            <div class="se_viewArea se_fs_T3 ">
+                <div class="se_editView" >
+                    <div class="se_textView">
+                        <div class="__se_code_view se_textarea language-javascript">#include &lt; stdlib.h &gt; &#10;void abort (void); </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/data" class="__se_module_data" data-module='{"type":"v1_code", "docVersion" : "1.0", "id" :"SEDOC-1512350174371--1649914949_code_3" , "data" : { "baseElId" : "SEDOC-1512350174371--1649914949_code_3"}}'></script>
+
+
+
+
+    
+
+
+
+
+
+
+
+
+<div class="se_component se_paragraph default">
+    <div class="se_sectionArea">
+        <div class="se_editArea">
+            <div class="se_viewArea se_ff_nanumgothic se_fs_T3 se_align-left" >
+                <div class="se_editView">
+                    <div class="se_textView">
+                        <p class="se_textarea"><!-- SE3-TEXT { --><span>- 이를 호출한 프로세스에 SIGABRT 시그널을 보냄 <br></span><span>&nbsp; - 프로세스를 비정상적으로 종료시키고 코어 덤프 파일 생성 </span><br>&nbsp; - 최소한 해당 프로세스가 연 파일은 모두 닫음 <br>- 프로세스를 종료시키므로 리턴하지 않음 <!-- } SE3-TEXT --></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+<div class="se_component se_sectionTitle ">
+    <div class="se_sectionArea se_align-left">
+        <div class="se_editArea">
+            <div class="se_viewArea se_ff_nanumgothic se_fs_H1 "
+            			style="color: ;
+                        text-decoration: inherit;
+                        font-style: inherit;
+                        ">
+                <div class="se_editView">
+                    <div class="se_textView">
+                        <h4 class="se_textarea"><!-- SE3-TEXT { -->시그널 기본처리 <!-- } SE3-TEXT --></h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+<div class="se_component se_paragraph default">
+    <div class="se_sectionArea">
+        <div class="se_editArea">
+            <div class="se_viewArea se_ff_nanumgothic se_fs_T3 se_align-left" >
+                <div class="se_editView">
+                    <div class="se_textView">
+                        <p class="se_textarea"><!-- SE3-TEXT { -->- 종료하기전에 처리할 작업이 남아 있거나 특정 시그널에 대해 종료하고 싶지 않을 때 시그널 호출 시 수행할 함수를 지정(시그널 핸들러) <br>- 시그널을 확인해 처리하는 일을 시그널 붙잡기(catching a signal) <!-- } SE3-TEXT --></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+<div class="se_component se_sectionTitle ">
+    <div class="se_sectionArea se_align-left">
+        <div class="se_editArea">
+            <div class="se_viewArea se_ff_nanumgothic se_fs_H1 "
+            			style="color: ;
+                        text-decoration: inherit;
+                        font-style: inherit;
+                        ">
+                <div class="se_editView">
+                    <div class="se_textView">
+                        <h4 class="se_textarea"><!-- SE3-TEXT { -->시그널 핸들러 함수 <!-- } SE3-TEXT --></h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+<div class="se_component se_paragraph default">
+    <div class="se_sectionArea">
+        <div class="se_editArea">
+            <div class="se_viewArea se_ff_nanumgothic se_fs_T3 se_align-left" >
+                <div class="se_editView">
+                    <div class="se_textView">
+                        <p class="se_textarea"><!-- SE3-TEXT { --><span>- 시그널 핸들러 지정&nbsp;: signal(3) <br></span><span></span><!-- } SE3-TEXT --></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="se_component se_code default" id="SEDOC-1512350174371--1649914949_code_4">
+    <div class="se_sectionArea">
+        <div class="se_editArea">
+            <div class="se_viewArea se_fs_T3 ">
+                <div class="se_editView" >
+                    <div class="se_textView">
+                        <div class="__se_code_view se_textarea language-javascript">#include &lt; signal.h &gt; &#10;void (*signal (int sig, void (*disp)(int))) (int); &#10;// sig : 시그널 핸들러로 처리하려는 시그널 &#10;// disp : 시그널 핸들러의 함수명 </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/data" class="__se_module_data" data-module='{"type":"v1_code", "docVersion" : "1.0", "id" :"SEDOC-1512350174371--1649914949_code_4" , "data" : { "baseElId" : "SEDOC-1512350174371--1649914949_code_4"}}'></script>
+
+
+
+
+    
+
+
+
+
+
+
+
+
+<div class="se_component se_paragraph default">
+    <div class="se_sectionArea">
+        <div class="se_editArea">
+            <div class="se_viewArea se_ff_nanumgothic se_fs_T3 se_align-left" >
+                <div class="se_editView">
+                    <div class="se_textView">
+                        <p class="se_textarea"><!-- SE3-TEXT { --><span>- 해당 시그널을 처리할 함수나 상수를 지정 <br></span><span>&nbsp; - sig&nbsp;: SIGKILL, SIGSTOP을 제외한 모든 시그널을 지정할 수 있음 </span><br><span>&nbsp; - disp&nbsp;: sig로 지정한 시그널을 받았을 때 처리할 방법을 지정 <br></span><span>&nbsp; &nbsp; - 시그널 핸들러 주소 </span><br>&nbsp; &nbsp; - SIG_IGN&nbsp;: 시그널을 무시하도록 지정 <br>&nbsp; &nbsp; - SIG_DFL&nbsp;: 시그널의 기본 처리 방법을 수행하도록 지정 <br><span>- 시그널 핸들러의 주소를 리턴 <br></span><span>&nbsp; - 실패하면 SIG_ERR </span><br><span>- disp가 함수 주소, sig가 SIGKILL, SIGTRAP, SIGPWR이 아니면 signal 함수는 시그널을 처리한 후 시그널 처리방법을 기본처리 방법으로 재설정(SIG_DFL) <br></span><span>&nbsp; - 시그널 처리를 계속하려면 signal 함수를 호출해 시그널을 처리한 후 다시 signal 함수를 설정해야 함 </span><br><br><span>- 시그널 핸들러 지정&nbsp;: sigset(3) <br></span><span></span><!-- } SE3-TEXT --></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="se_component se_code default" id="SEDOC-1512350174371--1649914949_code_5">
+    <div class="se_sectionArea">
+        <div class="se_editArea">
+            <div class="se_viewArea se_fs_T3 ">
+                <div class="se_editView" >
+                    <div class="se_textView">
+                        <div class="__se_code_view se_textarea language-javascript">#include &lt; signal.h &gt; &#10;void (*sigset (int sig, void (*disp)(int))) (int); &#10;// sig : 시그널 핸들러로 처리하려는 시그널 &#10;// disp : 시그널 핸들러의 함수명 </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/data" class="__se_module_data" data-module='{"type":"v1_code", "docVersion" : "1.0", "id" :"SEDOC-1512350174371--1649914949_code_5" , "data" : { "baseElId" : "SEDOC-1512350174371--1649914949_code_5"}}'></script>
+
+
+
+
+    
+
+
+
+
+
+
+
+
+<div class="se_component se_paragraph default">
+    <div class="se_sectionArea">
+        <div class="se_editArea">
+            <div class="se_viewArea se_ff_nanumgothic se_fs_T3 se_align-left" >
+                <div class="se_editView">
+                    <div class="se_textView">
+                        <p class="se_textarea"><!-- SE3-TEXT { --><span>- sigset과 signal 함수의 인자구조는 동일 <br></span><span>&nbsp; - sig&nbsp;: SIGKILL, SIGSTOP을 제외한 모든 시그널을 지정할 수 있음 </span><br><span>&nbsp; - disp&nbsp;: sig로 지정한 시그널을 받았을 때 처리할 방법을 지정 <br></span><span>&nbsp; &nbsp; - 시그널 핸들러 주소 </span><br>&nbsp; &nbsp; - SIG_IGN&nbsp;: 시그널을 무시하도록 지정 <br>&nbsp; &nbsp; - SIG_DFL&nbsp;: 시그널의 기본 처리 방법을 수행하도록 지정 <br><span>- 시그널 핸들러의 주소를 리턴 <br></span><span>&nbsp; - 실패하면 SIG_ERR </span><br><span>- 시그널 핸들러가 한 번 호출된 후에 기본동작으로 재설정하지 않고 시그널 핸들러를 자동으로 재지정<br></span><span>&nbsp; - 시그널 핸들러를 재지정 할 필요가 없음 </span><!-- } SE3-TEXT --></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+<div class="se_component se_sectionTitle ">
+    <div class="se_sectionArea se_align-left">
+        <div class="se_editArea">
+            <div class="se_viewArea se_ff_nanumgothic se_fs_H1 "
+            			style="color: ;
+                        text-decoration: inherit;
+                        font-style: inherit;
+                        ">
+                <div class="se_editView">
+                    <div class="se_textView">
+                        <h4 class="se_textarea"><!-- SE3-TEXT { -->시그널 집합 <!-- } SE3-TEXT --></h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+<div class="se_component se_paragraph default">
+    <div class="se_sectionArea">
+        <div class="se_editArea">
+            <div class="se_viewArea se_ff_nanumgothic se_fs_T3 se_align-left" >
+                <div class="se_editView">
+                    <div class="se_textView">
+                        <p class="se_textarea"><!-- SE3-TEXT { -->- POSIX 표준에서 시그널과 관련해 정의한 함수 중 상당 수는 시그널을 개별적으로 처리하지 않고 복수의 시그널을 처리할 수 있게 함 (시그널 집합(signal set)) <!-- } SE3-TEXT --></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+<div class="se_component se_sectionTitle ">
+    <div class="se_sectionArea se_align-left">
+        <div class="se_editArea">
+            <div class="se_viewArea se_ff_nanumgothic se_fs_H1 "
+            			style="color: ;
+                        text-decoration: inherit;
+                        font-style: inherit;
+                        ">
+                <div class="se_editView">
+                    <div class="se_textView">
+                        <h4 class="se_textarea"><!-- SE3-TEXT { -->시그널 집합의 개념 <!-- } SE3-TEXT --></h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+<div class="se_component se_paragraph default">
+    <div class="se_sectionArea">
+        <div class="se_editArea">
+            <div class="se_viewArea se_ff_nanumgothic se_fs_T3 se_align-left" >
+                <div class="se_editView">
+                    <div class="se_textView">
+                        <p class="se_textarea"><!-- SE3-TEXT { -->- 시그널 집합은 비트 마스크로 표현 (시그널 하나가 비트 하나를 가리킴) <br><span>- 유닉스에서 시그널 집합의 처리를 위해 sigset_t이라는 구조체를 제공 <br></span><span>&nbsp; - sigset_t 구조체는 크기가 4인 unsigned int 배열을 사용 </span><br><!-- } SE3-TEXT --></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="se_component se_code default" id="SEDOC-1512350174371--1649914949_code_6">
+    <div class="se_sectionArea">
+        <div class="se_editArea">
+            <div class="se_viewArea se_fs_T3 ">
+                <div class="se_editView" >
+                    <div class="se_textView">
+                        <div class="__se_code_view se_textarea language-javascript">typedef struct { &#10;  unsigned int __sigbits[4]; &#10;} sigset_t;</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/data" class="__se_module_data" data-module='{"type":"v1_code", "docVersion" : "1.0", "id" :"SEDOC-1512350174371--1649914949_code_6" , "data" : { "baseElId" : "SEDOC-1512350174371--1649914949_code_6"}}'></script>
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+<div class="se_component se_sectionTitle ">
+    <div class="se_sectionArea se_align-left">
+        <div class="se_editArea">
+            <div class="se_viewArea se_ff_nanumgothic se_fs_H1 "
+            			style="color: ;
+                        text-decoration: inherit;
+                        font-style: inherit;
+                        ">
+                <div class="se_editView">
+                    <div class="se_textView">
+                        <h4 class="se_textarea"><!-- SE3-TEXT { -->시그널 집합 처리 함수 <!-- } SE3-TEXT --></h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+<div class="se_component se_paragraph default">
+    <div class="se_sectionArea">
+        <div class="se_editArea">
+            <div class="se_viewArea se_ff_nanumgothic se_fs_T3 se_align-left" >
+                <div class="se_editView">
+                    <div class="se_textView">
+                        <p class="se_textarea"><!-- SE3-TEXT { --><span>- 시그널 집합 비우기&nbsp;: sigemptyset(3) <br></span><span></span><!-- } SE3-TEXT --></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="se_component se_code default" id="SEDOC-1512350174371--1649914949_code_7">
+    <div class="se_sectionArea">
+        <div class="se_editArea">
+            <div class="se_viewArea se_fs_T3 ">
+                <div class="se_editView" >
+                    <div class="se_textView">
+                        <div class="__se_code_view se_textarea language-javascript">#include &lt; signal.h &gt; &#10;int sigemptyset(sigset_t *set); &#10;// set : 비우려는 시그널 집합의 주소 </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/data" class="__se_module_data" data-module='{"type":"v1_code", "docVersion" : "1.0", "id" :"SEDOC-1512350174371--1649914949_code_7" , "data" : { "baseElId" : "SEDOC-1512350174371--1649914949_code_7"}}'></script>
+
+
+
+
+    
+
+
+
+
+
+
+
+
+<div class="se_component se_paragraph default">
+    <div class="se_sectionArea">
+        <div class="se_editArea">
+            <div class="se_viewArea se_ff_nanumgothic se_fs_T3 se_align-left" >
+                <div class="se_editView">
+                    <div class="se_textView">
+                        <p class="se_textarea"><!-- SE3-TEXT { -->- 시스템에서 정의한 모든 시그널을 배제해 인자로 지정한 시그널 집합을 빈 집합으로 만듬 (시그널 비트를 모두 0으로 설정) <br>- 수행을 성공하면 0, 실패하면 -1 리턴 <br><br><span>- 시그널 집합에 모든 시그널 설정&nbsp;: sigfillset(3) <br></span><span></span><!-- } SE3-TEXT --></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="se_component se_code default" id="SEDOC-1512350174371--1649914949_code_8">
+    <div class="se_sectionArea">
+        <div class="se_editArea">
+            <div class="se_viewArea se_fs_T3 ">
+                <div class="se_editView" >
+                    <div class="se_textView">
+                        <div class="__se_code_view se_textarea language-javascript">#include &lt; signal.h &gt; &#10;int sigfillset(sigset_t *set); &#10;// set : 설정하려는 시그널 집합의 주소 </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/data" class="__se_module_data" data-module='{"type":"v1_code", "docVersion" : "1.0", "id" :"SEDOC-1512350174371--1649914949_code_8" , "data" : { "baseElId" : "SEDOC-1512350174371--1649914949_code_8"}}'></script>
+
+
+
+
+    
+
+
+
+
+
+
+
+
+<div class="se_component se_paragraph default">
+    <div class="se_sectionArea">
+        <div class="se_editArea">
+            <div class="se_viewArea se_ff_nanumgothic se_fs_T3 se_align-left" >
+                <div class="se_editView">
+                    <div class="se_textView">
+                        <p class="se_textarea"><!-- SE3-TEXT { -->- 인자로 받은 시그널 집합을 시스템에서 정의한 모든 시그널을 포함하는 집합으로 만듬 (시그널 집합의 모든 비트를 1로 설정) <br>- 수행을 성공하면 0, 실패하면 -1 리턴 <br><br><span>- 시그널 집합에 시그널 설정 추가&nbsp;: sigaddset(3) <br></span><span></span><!-- } SE3-TEXT --></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="se_component se_code default" id="SEDOC-1512350174371--1649914949_code_9">
+    <div class="se_sectionArea">
+        <div class="se_editArea">
+            <div class="se_viewArea se_fs_T3 ">
+                <div class="se_editView" >
+                    <div class="se_textView">
+                        <div class="__se_code_view se_textarea language-javascript">#include &lt; signal.h &gt; &#10;int sigaddset (sigset_t *set, int signo); &#10;// set : 시그널을 추가하려는 시그널 집합의 주소 &#10;// signo : 시그널 집합에 추가로 설정하려는 시그널 </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/data" class="__se_module_data" data-module='{"type":"v1_code", "docVersion" : "1.0", "id" :"SEDOC-1512350174371--1649914949_code_9" , "data" : { "baseElId" : "SEDOC-1512350174371--1649914949_code_9"}}'></script>
+
+
+
+
+    
+
+
+
+
+
+
+
+
+<div class="se_component se_paragraph default">
+    <div class="se_sectionArea">
+        <div class="se_editArea">
+            <div class="se_viewArea se_ff_nanumgothic se_fs_T3 se_align-left" >
+                <div class="se_editView">
+                    <div class="se_textView">
+                        <p class="se_textarea"><!-- SE3-TEXT { -->- signo로 지정한 시그널을 set으로 지정한 시그널 집합에 추가 <br>- 수행을 성공하면 0, 실패하면 -1 리턴 <br><br><span>- 시그널 집합에서 시그널 설정 삭제&nbsp;: sigdelset(3) <br></span><span></span><!-- } SE3-TEXT --></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="se_component se_code default" id="SEDOC-1512350174371--1649914949_code_10">
+    <div class="se_sectionArea">
+        <div class="se_editArea">
+            <div class="se_viewArea se_fs_T3 ">
+                <div class="se_editView" >
+                    <div class="se_textView">
+                        <div class="__se_code_view se_textarea language-javascript">#include &lt; signal.h &gt; &#10;int sigdelset (sigset_t *set, int signo); &#10;// set : 시그널을 삭제하려는 시그널 집합의 주소 &#10;// signo : 시그널 집합에서 삭제하려는 시그널 </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/data" class="__se_module_data" data-module='{"type":"v1_code", "docVersion" : "1.0", "id" :"SEDOC-1512350174371--1649914949_code_10" , "data" : { "baseElId" : "SEDOC-1512350174371--1649914949_code_10"}}'></script>
+
+
+
+
+    
+
+
+
+
+
+
+
+
+<div class="se_component se_paragraph default">
+    <div class="se_sectionArea">
+        <div class="se_editArea">
+            <div class="se_viewArea se_ff_nanumgothic se_fs_T3 se_align-left" >
+                <div class="se_editView">
+                    <div class="se_textView">
+                        <p class="se_textarea"><!-- SE3-TEXT { -->- signo로 지정한 시그널을 set으로 지정한 시그널 집합에서 제거 <br>- 수행을 성공하면 0, 실패하면 -1 리턴 <br><br><span>- 시그널 집합에 설정된 시그널 확인&nbsp;: sigismember(3) <br></span><span></span><!-- } SE3-TEXT --></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="se_component se_code default" id="SEDOC-1512350174371--1649914949_code_11">
+    <div class="se_sectionArea">
+        <div class="se_editArea">
+            <div class="se_viewArea se_fs_T3 ">
+                <div class="se_editView" >
+                    <div class="se_textView">
+                        <div class="__se_code_view se_textarea language-javascript">#include &lt; signal.h &gt; &#10;int sigismember (sigset_t *set, int signo); &#10;// set : 확인하려는 시그널 집합의 주소 &#10;// signo : 시그널 집합에 설정되었는지 확인하려는 시그널 </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/data" class="__se_module_data" data-module='{"type":"v1_code", "docVersion" : "1.0", "id" :"SEDOC-1512350174371--1649914949_code_11" , "data" : { "baseElId" : "SEDOC-1512350174371--1649914949_code_11"}}'></script>
+
+
+
+
+    
+
+
+
+
+
+
+
+
+<div class="se_component se_paragraph default">
+    <div class="se_sectionArea">
+        <div class="se_editArea">
+            <div class="se_viewArea se_ff_nanumgothic se_fs_T3 se_align-left" >
+                <div class="se_editView">
+                    <div class="se_textView">
+                        <p class="se_textarea"><!-- SE3-TEXT { -->- signo로 지정한 시그널이 set으로 지정한 시그널 집합에 포함되어 있으면 1, 없으면 0 리턴 <!-- } SE3-TEXT --></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+<div class="se_component se_sectionTitle ">
+    <div class="se_sectionArea se_align-left">
+        <div class="se_editArea">
+            <div class="se_viewArea se_ff_nanumgothic se_fs_H1 "
+            			style="color: ;
+                        text-decoration: inherit;
+                        font-style: inherit;
+                        ">
+                <div class="se_editView">
+                    <div class="se_textView">
+                        <h4 class="se_textarea"><!-- SE3-TEXT { -->sigaction 함수의 활용 <!-- } SE3-TEXT --></h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+<div class="se_component se_paragraph default">
+    <div class="se_sectionArea">
+        <div class="se_editArea">
+            <div class="se_viewArea se_ff_nanumgothic se_fs_T3 se_align-left" >
+                <div class="se_editView">
+                    <div class="se_textView">
+                        <p class="se_textarea"><!-- SE3-TEXT { -->- signal, sigset 함수처럼 시그널을 받았을 때 이를 처리할 수 있는 함수를 지정 <!-- } SE3-TEXT --></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+<div class="se_component se_sectionTitle ">
+    <div class="se_sectionArea se_align-left">
+        <div class="se_editArea">
+            <div class="se_viewArea se_ff_nanumgothic se_fs_H1 "
+            			style="color: ;
+                        text-decoration: inherit;
+                        font-style: inherit;
+                        ">
+                <div class="se_editView">
+                    <div class="se_textView">
+                        <h4 class="se_textarea"><!-- SE3-TEXT { -->sigaction 구조체 <!-- } SE3-TEXT --></h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+<div class="se_component se_paragraph default">
+    <div class="se_sectionArea">
+        <div class="se_editArea">
+            <div class="se_viewArea se_ff_nanumgothic se_fs_T3 se_align-left" >
+                <div class="se_editView">
+                    <div class="se_textView">
+                        <p class="se_textarea"><!-- SE3-TEXT { -->- &lt; sys/signal.h &gt;에 정의 <br><span>- 구조체 멤버 <br></span><span>&nbsp; - 시그널 처리를 위한 시그널 핸들러 주소 </span><br>&nbsp; - 시그널 핸들러가 수행하는 동안 블록될 시그널 <br>&nbsp; - 추가적인 기능을 설정할 수 있는 플래그 <br><!-- } SE3-TEXT --></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="se_component se_code default" id="SEDOC-1512350174371--1649914949_code_12">
+    <div class="se_sectionArea">
+        <div class="se_editArea">
+            <div class="se_viewArea se_fs_T3 ">
+                <div class="se_editView" >
+                    <div class="se_textView">
+                        <div class="__se_code_view se_textarea language-javascript">truct sigaction { &#10;  int sa_flags; &#10;  union { &#10;    void (*sa_handler)(); &#10;    void (*sa_sigaction)(int, siginfo_t *, void *); &#10;  } &#10;  _funcptr; sigset_t sa_mask; &#10;}; </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/data" class="__se_module_data" data-module='{"type":"v1_code", "docVersion" : "1.0", "id" :"SEDOC-1512350174371--1649914949_code_12" , "data" : { "baseElId" : "SEDOC-1512350174371--1649914949_code_12"}}'></script>
+
+
+
+
+    
+
+
+
+
+
+
+
+
+<div class="se_component se_paragraph default">
+    <div class="se_sectionArea">
+        <div class="se_editArea">
+            <div class="se_viewArea se_ff_nanumgothic se_fs_T3 se_align-left" >
+                <div class="se_editView">
+                    <div class="se_textView">
+                        <p class="se_textarea"><!-- SE3-TEXT { -->- sa_flag&nbsp;: 시그널 전달 방법을 수정할 플래그를 지정&nbsp;&nbsp;<br><span>- sa_handler, sa_sigaction&nbsp;: sa_handler, sa_sigaction는 메모리가 중첩됨 <br></span><span>&nbsp; &nbsp; - sa_flags 에 SA_SIGINFO 설정되어 있지 않으면 sa_handler에는 시그널을 처리할 동작을 지정 </span><br>&nbsp; &nbsp; - sa_flags 에 SA_SIGINFO 가 설정되어 있으면 sa_sigaction 멤버를 사용 <br><span>- sa_mask&nbsp;: 핸들러가 동작 중일 때 블록할 시그널을 시그널 집합으로 지정 <br></span><span>&nbsp; - 시그널 핸들러가 시작되어 시그널을 전달할 때 이미 블록된 시그널 집합에 sa_mask로 지정한 시그널 집합을 추가 </span><br>&nbsp; - sa_flags에 SA_NODEFER를 설정하지 않으면 시그널 핸들러를 호출하게 한 시그널도 블록 <!-- } SE3-TEXT --></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+<div class="se_component se_sectionTitle ">
+    <div class="se_sectionArea se_align-left">
+        <div class="se_editArea">
+            <div class="se_viewArea se_ff_nanumgothic se_fs_H1 "
+            			style="color: ;
+                        text-decoration: inherit;
+                        font-style: inherit;
+                        ">
+                <div class="se_editView">
+                    <div class="se_textView">
+                        <h4 class="se_textarea"><!-- SE3-TEXT { -->sigaction 함수 <!-- } SE3-TEXT --></h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+<div class="se_component se_paragraph default">
+    <div class="se_sectionArea">
+        <div class="se_editArea">
+            <div class="se_viewArea se_ff_nanumgothic se_fs_T3 se_align-left" >
+                <div class="se_editView">
+                    <div class="se_textView">
+                        <p class="se_textarea"><!-- SE3-TEXT { -->- 시그널을 받아 이를 처리할 시그널 핸들러를 지정할 뿐만 아니라 플래그를 설정해 시그널을 처리하는 과정 제어 <br><span>- 시그널 핸들러가 수행되는 동안 다른 시그널을 블록할 수 있음 <br></span><span></span><!-- } SE3-TEXT --></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="se_component se_code default" id="SEDOC-1512350174371--1649914949_code_13">
+    <div class="se_sectionArea">
+        <div class="se_editArea">
+            <div class="se_viewArea se_fs_T3 ">
+                <div class="se_editView" >
+                    <div class="se_textView">
+                        <div class="__se_code_view se_textarea language-javascript">#include &lt; signal.h &gt; &#10;int sigaction (int sig, const struct sigaction *restrict act, struct sigaction *restrict oact); &#10;// sig : 처리할 시그널 &#10;// act : 시그널을 처리할 방법을 지정한 구조체 주소 &#10;// oact : 기존에 시그널을 처리하던 방법을 저장할 구조체 주소 </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/data" class="__se_module_data" data-module='{"type":"v1_code", "docVersion" : "1.0", "id" :"SEDOC-1512350174371--1649914949_code_13" , "data" : { "baseElId" : "SEDOC-1512350174371--1649914949_code_13"}}'></script>
+
+
+
+
+    
+
+
+
+
+
+
+
+
+<div class="se_component se_paragraph default">
+    <div class="se_sectionArea">
+        <div class="se_editArea">
+            <div class="se_viewArea se_ff_nanumgothic se_fs_T3 se_align-left" >
+                <div class="se_editView">
+                    <div class="se_textView">
+                        <p class="se_textarea"><!-- SE3-TEXT { --><span>- sig에 지정한 시그널을 받았을 때 처리할 방법을 sigaction 구조체인 act로 받음 <br></span><span>&nbsp; - SIGKILL, SIGSTOP를 제외한 어떤 시그널도 사용할 수 있음 </span><br>&nbsp; - 두 번째, 세 번째 인자는 sigaction 구조체를 사용해 지정 두 번째 인자로 NULL 또는 sig에 지정된 시그널을 받았을 때 처리할 방법을 지정한 구조체 주소를 지정 <br>&nbsp; - 세 번째 인자에는 NULL 또는 기존 처리방법이 저장 <br>- 수행을 성공하면 0, 실패하면 -1 리턴 <!-- } SE3-TEXT --></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+<div class="se_component se_sectionTitle ">
+    <div class="se_sectionArea se_align-left">
+        <div class="se_editArea">
+            <div class="se_viewArea se_ff_nanumgothic se_fs_H1 "
+            			style="color: ;
+                        text-decoration: inherit;
+                        font-style: inherit;
+                        ">
+                <div class="se_editView">
+                    <div class="se_textView">
+                        <h4 class="se_textarea"><!-- SE3-TEXT { -->시그널 발생 원인 검색 <!-- } SE3-TEXT --></h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+<div class="se_component se_paragraph default">
+    <div class="se_sectionArea">
+        <div class="se_editArea">
+            <div class="se_viewArea se_ff_nanumgothic se_fs_T3 se_align-left" >
+                <div class="se_editView">
+                    <div class="se_textView">
+                        <p class="se_textarea"><!-- SE3-TEXT { --><span>- sa_flags 에 SA_SIGINFO 플래그를 지정하면 시그널이발생한 원인을 알 수 있음 <br></span><span></span><!-- } SE3-TEXT --></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="se_component se_code default" id="SEDOC-1512350174371--1649914949_code_14">
+    <div class="se_sectionArea">
+        <div class="se_editArea">
+            <div class="se_viewArea se_fs_T3 ">
+                <div class="se_editView" >
+                    <div class="se_textView">
+                        <div class="__se_code_view se_textarea language-javascript">void handler(int sig, siginfo_t *sip, ucontext_t *ucp); &#10;// sig : 시그널 핸들러를 호출할 시그널 &#10;// sip : 시그널이 발생한 원인을 담은 siginfo_t 구조체 포인터 &#10;// ucp : 시그널이 전달될 때 시그널을 받은 프로세스의 내부 상태를 나타내느 ucontext_t 구조체 포인터 </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/data" class="__se_module_data" data-module='{"type":"v1_code", "docVersion" : "1.0", "id" :"SEDOC-1512350174371--1649914949_code_14" , "data" : { "baseElId" : "SEDOC-1512350174371--1649914949_code_14"}}'></script>
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="se_component se_code default" id="SEDOC-1512350174371--1649914949_code_15">
+    <div class="se_sectionArea">
+        <div class="se_editArea">
+            <div class="se_viewArea se_fs_T3 ">
+                <div class="se_editView" >
+                    <div class="se_textView">
+                        <div class="__se_code_view se_textarea language-javascript">typedef structure { &#10;  int si_signo; &#10;  int si_errno; &#10;  int si_code; &#10;  union sigval si_value; &#10;  union { &#10;    .... &#10;  } __data; &#10;} siginfo_t; </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/data" class="__se_module_data" data-module='{"type":"v1_code", "docVersion" : "1.0", "id" :"SEDOC-1512350174371--1649914949_code_15" , "data" : { "baseElId" : "SEDOC-1512350174371--1649914949_code_15"}}'></script>
+
+
+
+
+    
+
+
+
+
+
+
+
+
+<div class="se_component se_paragraph default">
+    <div class="se_sectionArea">
+        <div class="se_editArea">
+            <div class="se_viewArea se_ff_nanumgothic se_fs_T3 se_align-left" >
+                <div class="se_editView">
+                    <div class="se_textView">
+                        <p class="se_textarea"><!-- SE3-TEXT { -->- si_signo&nbsp;: 시스템에서 제공하는 시그널번호 저장 <br>- si_errno&nbsp;: 0 또는 시그널과 관련된 오류 번호를 저장 <br><span>- si_code&nbsp;: 시그널 발생원인을 정의하는 코드 저장 <br></span><span>&nbsp; &nbsp; - SI_NOINFO -&gt; si_signo만 의미가 있고 siginfo_t 구조체의 나머지 멤버는 사용되지 않음 </span><br>- __data&nbsp;: 시그널 종류에 따라 값이 저장 (세부내용은 &lt; sys/siginfo.h &gt; 참고) <br><br>- 사용자 프로세스에 의한 시그널발생 원인 코드(si_code 값) <!-- } SE3-TEXT --></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="se_component se_table default">
+        <div class="se_sectionArea se_align-left">
+            <div class="se_editArea">
+                <div id="SEDOC-1512350174371--1649914949_table_0" data-attachment-id="" class="se_table_wrap">
+                    <div class="se_table_innerWrap">
+                        <table class="se_table_col" style="width:100%;">
+                            <tbody>
+                                <tr>
+                                    <td class="se_cell se_align-left" colspan="1" rowspan="1"
+                                    style="width:33.226837%;height:44.0px;background-color:;">
+                                        <div class="se_cellArea"> 코드 </div>
+                                    </td>
+                                    <td class="se_cell se_align-left" colspan="1" rowspan="1"
+                                    style="width:33.38658%;height:44.0px;background-color:;">
+                                        <div class="se_cellArea"> 값 </div>
+                                    </td>
+                                    <td class="se_cell se_align-left" colspan="1" rowspan="1"
+                                    style="width:33.38658%;height:44.0px;background-color:;">
+                                        <div class="se_cellArea"> 의미 </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="se_cell se_align-left" colspan="1" rowspan="1"
+                                    style="width:33.226837%;height:61.0px;background-color:;">
+                                        <div class="se_cellArea"> SI_USER </div>
+                                    </td>
+                                    <td class="se_cell se_align-left" colspan="1" rowspan="1"
+                                    style="width:33.38658%;height:61.0px;background-color:;">
+                                        <div class="se_cellArea"> 0  </div>
+                                    </td>
+                                    <td class="se_cell se_align-left" colspan="1" rowspan="1"
+                                    style="width:33.38658%;height:61.0px;background-color:;">
+                                        <div class="se_cellArea"> kill(2), sigsend(2), raise(3), abort(3) 함수가 시그널을 보냄 </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="se_cell se_align-left" colspan="1" rowspan="1"
+                                    style="width:33.226837%;height:44.0px;background-color:;">
+                                        <div class="se_cellArea"> SI_LWP  </div>
+                                    </td>
+                                    <td class="se_cell se_align-left" colspan="1" rowspan="1"
+                                    style="width:33.38658%;height:44.0px;background-color:;">
+                                        <div class="se_cellArea"> -1 </div>
+                                    </td>
+                                    <td class="se_cell se_align-left" colspan="1" rowspan="1"
+                                    style="width:33.38658%;height:44.0px;background-color:;">
+                                        <div class="se_cellArea"> _lwp_kill(2) 함수가 시그널을 보냄 </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="se_cell se_align-left" colspan="1" rowspan="1"
+                                    style="width:33.226837%;height:44.0px;background-color:;">
+                                        <div class="se_cellArea"> SI_QUEUE </div>
+                                    </td>
+                                    <td class="se_cell se_align-left" colspan="1" rowspan="1"
+                                    style="width:33.38658%;height:44.0px;background-color:;">
+                                        <div class="se_cellArea"> -2 </div>
+                                    </td>
+                                    <td class="se_cell se_align-left" colspan="1" rowspan="1"
+                                    style="width:33.38658%;height:44.0px;background-color:;">
+                                        <div class="se_cellArea"> sigqueue(3) 함수가 시그널을 보냄 </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="se_cell se_align-left" colspan="1" rowspan="1"
+                                    style="width:33.226837%;height:61.0px;background-color:;">
+                                        <div class="se_cellArea"> SI_TIMER </div>
+                                    </td>
+                                    <td class="se_cell se_align-left" colspan="1" rowspan="1"
+                                    style="width:33.38658%;height:61.0px;background-color:;">
+                                        <div class="se_cellArea"> -3 </div>
+                                    </td>
+                                    <td class="se_cell se_align-left" colspan="1" rowspan="1"
+                                    style="width:33.38658%;height:61.0px;background-color:;">
+                                        <div class="se_cellArea"> timer_settime(3) 함수가 생성한 타이머가 만료되어 시그널을 보냄 </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="se_cell se_align-left" colspan="1" rowspan="1"
+                                    style="width:33.226837%;height:61.0px;background-color:;">
+                                        <div class="se_cellArea"> SI_ASYNCIO </div>
+                                    </td>
+                                    <td class="se_cell se_align-left" colspan="1" rowspan="1"
+                                    style="width:33.38658%;height:61.0px;background-color:;">
+                                        <div class="se_cellArea"> -4 </div>
+                                    </td>
+                                    <td class="se_cell se_align-left" colspan="1" rowspan="1"
+                                    style="width:33.38658%;height:61.0px;background-color:;">
+                                        <div class="se_cellArea"> 비동기 입출력 요청이 완료되어 시그널을 보냄 </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="se_cell se_align-left" colspan="1" rowspan="1"
+                                    style="width:33.226837%;height:61.0px;background-color:;">
+                                        <div class="se_cellArea"> SI_MESGQ </div>
+                                    </td>
+                                    <td class="se_cell se_align-left" colspan="1" rowspan="1"
+                                    style="width:33.38658%;height:61.0px;background-color:;">
+                                        <div class="se_cellArea"> -5 </div>
+                                    </td>
+                                    <td class="se_cell se_align-left" colspan="1" rowspan="1"
+                                    style="width:33.38658%;height:61.0px;background-color:;">
+                                        <div class="se_cellArea"> 빈 메시지 큐에 메시지가 도착했음을 알리는 시그널을 보냄 </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/data" class="__se_module_data" data-module='{"type":"v1_table", "docVersion" : "1.0", "id" :"SEDOC-1512350174371--1649914949_table_0" , "data" : { "baseElId" : "SEDOC-1512350174371--1649914949_table_0", "columnCount": "3"}}'></script>
+
+
+
+    
+
+
+
+
+
+
+
+
+<div class="se_component se_paragraph default">
+    <div class="se_sectionArea">
+        <div class="se_editArea">
+            <div class="se_viewArea se_ff_nanumgothic se_fs_T3 se_align-left" >
+                <div class="se_editView">
+                    <div class="se_textView">
+                        <p class="se_textarea"><!-- SE3-TEXT { --><span>- si_code 값이 양수면 시스템에서 시그널을 생성 <br></span><span></span><!-- } SE3-TEXT --></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="se_component se_code default" id="SEDOC-1512350174371--1649914949_code_16">
+    <div class="se_sectionArea">
+        <div class="se_editArea">
+            <div class="se_viewArea se_fs_T3 ">
+                <div class="se_editView" >
+                    <div class="se_textView">
+                        <div class="__se_code_view se_textarea language-javascript">man -s 3HEAD siginfo.h &#10;// 시그널별 발생원인을 나타낸 코드 확인 (&lt; sys/machsig.h &gt;에 정의되어 있음) </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/data" class="__se_module_data" data-module='{"type":"v1_code", "docVersion" : "1.0", "id" :"SEDOC-1512350174371--1649914949_code_16" , "data" : { "baseElId" : "SEDOC-1512350174371--1649914949_code_16"}}'></script>
+
+
+
+
+    
+
+
+
+
+
+
+
+
+<div class="se_component se_paragraph default">
+    <div class="se_sectionArea">
+        <div class="se_editArea">
+            <div class="se_viewArea se_ff_nanumgothic se_fs_T3 se_align-left" >
+                <div class="se_editView">
+                    <div class="se_textView">
+                        <p class="se_textarea"><!-- SE3-TEXT { --><span>- 시그널 발생 원인 출력&nbsp;: psiginfo(3) <br></span><span></span><!-- } SE3-TEXT --></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="se_component se_code default" id="SEDOC-1512350174371--1649914949_code_17">
+    <div class="se_sectionArea">
+        <div class="se_editArea">
+            <div class="se_viewArea se_fs_T3 ">
+                <div class="se_editView" >
+                    <div class="se_textView">
+                        <div class="__se_code_view se_textarea language-javascript">#include &lt; siginfo.h &gt; &#10;void psiginfo (siginfo_t *pinfo, char *s); &#10;// pinfo : 시그널 발생 원인에 관한 정보를 저장하고 있는 구조체 포인터 &#10;// s : 출력할 문자열 </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/data" class="__se_module_data" data-module='{"type":"v1_code", "docVersion" : "1.0", "id" :"SEDOC-1512350174371--1649914949_code_17" , "data" : { "baseElId" : "SEDOC-1512350174371--1649914949_code_17"}}'></script>
+
+
+
+
+    
+
+
+
+
+
+
+
+
+<div class="se_component se_paragraph default">
+    <div class="se_sectionArea">
+        <div class="se_editArea">
+            <div class="se_viewArea se_ff_nanumgothic se_fs_T3 se_align-left" >
+                <div class="se_editView">
+                    <div class="se_textView">
+                        <p class="se_textarea"><!-- SE3-TEXT { --><span>- siginfo_t 구조체 포인터를 인자로 받아 시그널이 발생한 원인을 표준 오류로 출력 <br></span><span>&nbsp; &nbsp; - pinfo&nbsp;: 시그널 핸들러의 두번째 인자로 받은 siginfo_t 구조체의 주소를 지정 </span><br>- 함수를 실행하면 s에 지정한 문자열 출력 후 시그널 정보 출력 <!-- } SE3-TEXT --></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+<div class="se_component se_sectionTitle ">
+    <div class="se_sectionArea se_align-left">
+        <div class="se_editArea">
+            <div class="se_viewArea se_ff_nanumgothic se_fs_H1 "
+            			style="color: ;
+                        text-decoration: inherit;
+                        font-style: inherit;
+                        ">
+                <div class="se_editView">
+                    <div class="se_textView">
+                        <h4 class="se_textarea"><!-- SE3-TEXT { -->알람 시그널 <!-- } SE3-TEXT --></h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+<div class="se_component se_paragraph default">
+    <div class="se_sectionArea">
+        <div class="se_editArea">
+            <div class="se_viewArea se_ff_nanumgothic se_fs_T3 se_align-left" >
+                <div class="se_editView">
+                    <div class="se_textView">
+                        <p class="se_textarea"><!-- SE3-TEXT { -->- 일정 시간 후에 시그널 발생 <!-- } SE3-TEXT --></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+<div class="se_component se_sectionTitle ">
+    <div class="se_sectionArea se_align-left">
+        <div class="se_editArea">
+            <div class="se_viewArea se_ff_nanumgothic se_fs_H1 "
+            			style="color: ;
+                        text-decoration: inherit;
+                        font-style: inherit;
+                        ">
+                <div class="se_editView">
+                    <div class="se_textView">
+                        <h4 class="se_textarea"><!-- SE3-TEXT { -->알람 시그널 함수 <!-- } SE3-TEXT --></h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+<div class="se_component se_paragraph default">
+    <div class="se_sectionArea">
+        <div class="se_editArea">
+            <div class="se_viewArea se_ff_nanumgothic se_fs_T3 se_align-left" >
+                <div class="se_editView">
+                    <div class="se_textView">
+                        <p class="se_textarea"><!-- SE3-TEXT { --><span>- 알람 시그널 생성&nbsp;: alarm(2) <br></span><span></span><!-- } SE3-TEXT --></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="se_component se_code default" id="SEDOC-1512350174371--1649914949_code_18">
+    <div class="se_sectionArea">
+        <div class="se_editArea">
+            <div class="se_viewArea se_fs_T3 ">
+                <div class="se_editView" >
+                    <div class="se_textView">
+                        <div class="__se_code_view se_textarea language-javascript">#include &lt; unistd.h &gt; &#10;unsigned int alarm(unsigned int sec); &#10;// sec : 알람을 발생시킬 때까지 남은 시간 (sec) </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/data" class="__se_module_data" data-module='{"type":"v1_code", "docVersion" : "1.0", "id" :"SEDOC-1512350174371--1649914949_code_18" , "data" : { "baseElId" : "SEDOC-1512350174371--1649914949_code_18"}}'></script>
+
+
+
+
+    
+
+
+
+
+
+
+
+
+<div class="se_component se_paragraph default">
+    <div class="se_sectionArea">
+        <div class="se_editArea">
+            <div class="se_viewArea se_ff_nanumgothic se_fs_T3 se_align-left" >
+                <div class="se_editView">
+                    <div class="se_textView">
+                        <p class="se_textarea"><!-- SE3-TEXT { -->- sec로 지정한 시간이 지나면 SIGALRM 시그널이 생성되어 프로세스에 전달 <br><span>- 프로세스별 알람은 하나만 설정할 수 있음 <br></span><span>&nbsp; - 알람 시그널을 생성하기 전에 다시 alarm 함수를 호출하면 이전 설정은 없어지고 재설정 됨 </span><br>- 인자로 0을 지정하면 이전에 설정한 알람 요청을 모두 취소 <br>- 이전에 호출한 alarm 함수의 시간이 남아있으면 해당시간, 그렇지 않으면 0을 리턴 <!-- } SE3-TEXT --></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+<div class="se_component se_sectionTitle ">
+    <div class="se_sectionArea se_align-left">
+        <div class="se_editArea">
+            <div class="se_viewArea se_ff_nanumgothic se_fs_H1 "
+            			style="color: ;
+                        text-decoration: inherit;
+                        font-style: inherit;
+                        ">
+                <div class="se_editView">
+                    <div class="se_textView">
+                        <h4 class="se_textarea"><!-- SE3-TEXT { -->인터벌 타이머 <!-- } SE3-TEXT --></h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+<div class="se_component se_paragraph default">
+    <div class="se_sectionArea">
+        <div class="se_editArea">
+            <div class="se_viewArea se_ff_nanumgothic se_fs_T3 se_align-left" >
+                <div class="se_editView">
+                    <div class="se_textView">
+                        <p class="se_textarea"><!-- SE3-TEXT { -->- 알람 시그널은 정해진 시간에 <b>한 번</b> 시그널을 보냄 <br>- 일정 간격을 두고 타이머 역할 <br><span>- 종류 <br></span><span>&nbsp; &nbsp; - ITIMER_REAL&nbsp;: 실제시간 사용. 타이머 만료시 SIGALRM 시그널 생성 </span><br>&nbsp; &nbsp; - ITIMER_VIRTUAL&nbsp;: 프로세스의 가상 시간 사용 (프로세스가 동작중일 때만 작동). 타이머 만료시 SIGVTALRM 시그널 생성 <br>&nbsp; &nbsp; - ITIMER_PROF&nbsp;: 프로세스를 위해 실행중인 시간과 프로세스의 가상 시간을 모두 사용. 타이머가 만료되면 SIGPROF 시그널 생성 <br>&nbsp; &nbsp; - ITIMER_REALPROF&nbsp;: 멀티스레드 프로그램의 실제 시간을 측정할 때 사용(실제시간 사용). SIGPROF <br><br><span>- 타이머 정보 검색&nbsp;: getitimer(2) <br></span><span></span><!-- } SE3-TEXT --></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="se_component se_code default" id="SEDOC-1512350174371--1649914949_code_19">
+    <div class="se_sectionArea">
+        <div class="se_editArea">
+            <div class="se_viewArea se_fs_T3 ">
+                <div class="se_editView" >
+                    <div class="se_textView">
+                        <div class="__se_code_view se_textarea language-javascript">#include &lt; sys/time.h &gt; &#10;int getitimer (int which, struct itimerval *value); </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/data" class="__se_module_data" data-module='{"type":"v1_code", "docVersion" : "1.0", "id" :"SEDOC-1512350174371--1649914949_code_19" , "data" : { "baseElId" : "SEDOC-1512350174371--1649914949_code_19"}}'></script>
+
+
+
+
+    
+
+
+
+
+
+
+
+
+<div class="se_component se_paragraph default">
+    <div class="se_sectionArea">
+        <div class="se_editArea">
+            <div class="se_viewArea se_ff_nanumgothic se_fs_T3 se_align-left" >
+                <div class="se_editView">
+                    <div class="se_textView">
+                        <p class="se_textarea"><!-- SE3-TEXT { -->- which&nbsp;: 검색할 타이머의 종류 지정 <br>- value&nbsp;: 타이머 정보를 저장할 구조체 포인터 <br><span>- itimerval 구조체는 &lt; sys/time.h &gt; 파일에 정의되어 있음 <br></span><span></span><!-- } SE3-TEXT --></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="se_component se_code default" id="SEDOC-1512350174371--1649914949_code_20">
+    <div class="se_sectionArea">
+        <div class="se_editArea">
+            <div class="se_viewArea se_fs_T3 ">
+                <div class="se_editView" >
+                    <div class="se_textView">
+                        <div class="__se_code_view se_textarea language-javascript">struct itimerval { &#10;  struct timeval it_interval; &#10;  struct timerval it_value; &#10;}; </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/data" class="__se_module_data" data-module='{"type":"v1_code", "docVersion" : "1.0", "id" :"SEDOC-1512350174371--1649914949_code_20" , "data" : { "baseElId" : "SEDOC-1512350174371--1649914949_code_20"}}'></script>
+
+
+
+
+    
+
+
+
+
+
+
+
+
+<div class="se_component se_paragraph default">
+    <div class="se_sectionArea">
+        <div class="se_editArea">
+            <div class="se_viewArea se_ff_nanumgothic se_fs_T3 se_align-left" >
+                <div class="se_editView">
+                    <div class="se_textView">
+                        <p class="se_textarea"><!-- SE3-TEXT { -->- it_interval&nbsp;: 타이머 간격정보가 저장 (0이면 다음번 타이머가 만료될 때 타이머 기능이 멈춤) <br>- it_value&nbsp;: 만료때까지 남은 시간 저장 (0이면 타이머 기능이 멈춤) <br><span>- 이러한 시간정보들은 timeval 구조체에 정의 <br></span><span></span><!-- } SE3-TEXT --></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="se_component se_code default" id="SEDOC-1512350174371--1649914949_code_21">
+    <div class="se_sectionArea">
+        <div class="se_editArea">
+            <div class="se_viewArea se_fs_T3 ">
+                <div class="se_editView" >
+                    <div class="se_textView">
+                        <div class="__se_code_view se_textarea language-javascript">struct timeval { &#10;  time_t tv_sec; &#10;  suseconds_t tv_usec; &#10;}; </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/data" class="__se_module_data" data-module='{"type":"v1_code", "docVersion" : "1.0", "id" :"SEDOC-1512350174371--1649914949_code_21" , "data" : { "baseElId" : "SEDOC-1512350174371--1649914949_code_21"}}'></script>
+
+
+
+
+    
+
+
+
+
+
+
+
+
+<div class="se_component se_paragraph default">
+    <div class="se_sectionArea">
+        <div class="se_editArea">
+            <div class="se_viewArea se_ff_nanumgothic se_fs_T3 se_align-left" >
+                <div class="se_editView">
+                    <div class="se_textView">
+                        <p class="se_textarea"><!-- SE3-TEXT { -->- 초와 마이크로 초 단위로 시간을 저장 <br><br><span>- 타이머 설정&nbsp;: setitimer(2) <br></span><span></span><!-- } SE3-TEXT --></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="se_component se_code default" id="SEDOC-1512350174371--1649914949_code_22">
+    <div class="se_sectionArea">
+        <div class="se_editArea">
+            <div class="se_viewArea se_fs_T3 ">
+                <div class="se_editView" >
+                    <div class="se_textView">
+                        <div class="__se_code_view se_textarea language-javascript">#include &lt; sys/time.h &gt; &#10;int setitimer (int which, const struct itimerval *value, struct itimerval *ovalue); </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/data" class="__se_module_data" data-module='{"type":"v1_code", "docVersion" : "1.0", "id" :"SEDOC-1512350174371--1649914949_code_22" , "data" : { "baseElId" : "SEDOC-1512350174371--1649914949_code_22"}}'></script>
+
+
+
+
+    
+
+
+
+
+
+
+
+
+<div class="se_component se_paragraph default">
+    <div class="se_sectionArea">
+        <div class="se_editArea">
+            <div class="se_viewArea se_ff_nanumgothic se_fs_T3 se_align-left" >
+                <div class="se_editView">
+                    <div class="se_textView">
+                        <p class="se_textarea"><!-- SE3-TEXT { -->- which&nbsp;: 설정할 타이머의 종류 지정 <br>- value&nbsp;: 설정할 타이머 정보를 저장해 인터벌 타이머 설정 <br>- ovalue&nbsp;: NULL 또는 이전 설정값을 저장 <br>- value 와 ovalue는 itimerval 구조체를 가리키는 포인터 <!-- } SE3-TEXT --></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+<div class="se_component se_sectionTitle ">
+    <div class="se_sectionArea se_align-left">
+        <div class="se_editArea">
+            <div class="se_viewArea se_ff_nanumgothic se_fs_H1 "
+            			style="color: ;
+                        text-decoration: inherit;
+                        font-style: inherit;
+                        ">
+                <div class="se_editView">
+                    <div class="se_textView">
+                        <h4 class="se_textarea"><!-- SE3-TEXT { -->기타 시그널 처리 함수 <!-- } SE3-TEXT --></h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+<div class="se_component se_sectionTitle ">
+    <div class="se_sectionArea se_align-left">
+        <div class="se_editArea">
+            <div class="se_viewArea se_ff_nanumgothic se_fs_H1 "
+            			style="color: ;
+                        text-decoration: inherit;
+                        font-style: inherit;
+                        ">
+                <div class="se_editView">
+                    <div class="se_textView">
+                        <h4 class="se_textarea"><!-- SE3-TEXT { -->시그널 정보 출력 <!-- } SE3-TEXT --></h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+<div class="se_component se_paragraph default">
+    <div class="se_sectionArea">
+        <div class="se_editArea">
+            <div class="se_viewArea se_ff_nanumgothic se_fs_T3 se_align-left" >
+                <div class="se_editView">
+                    <div class="se_textView">
+                        <p class="se_textarea"><!-- SE3-TEXT { --><span>- 시그널 정보 출력&nbsp;: psignal(3) <br></span><span></span><!-- } SE3-TEXT --></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="se_component se_code default" id="SEDOC-1512350174371--1649914949_code_23">
+    <div class="se_sectionArea">
+        <div class="se_editArea">
+            <div class="se_viewArea se_fs_T3 ">
+                <div class="se_editView" >
+                    <div class="se_textView">
+                        <div class="__se_code_view se_textarea language-javascript">#include &lt; siginfo.h &gt; &#10;void psignal (int sig, const char *s); &#10;// sig : 정보를 출력할 시그널 &#10;// s : 출력할 문자열 </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/data" class="__se_module_data" data-module='{"type":"v1_code", "docVersion" : "1.0", "id" :"SEDOC-1512350174371--1649914949_code_23" , "data" : { "baseElId" : "SEDOC-1512350174371--1649914949_code_23"}}'></script>
+
+
+
+
+    
+
+
+
+
+
+
+
+
+<div class="se_component se_paragraph default">
+    <div class="se_sectionArea">
+        <div class="se_editArea">
+            <div class="se_viewArea se_ff_nanumgothic se_fs_T3 se_align-left" >
+                <div class="se_editView">
+                    <div class="se_textView">
+                        <p class="se_textarea"><!-- SE3-TEXT { -->- s로 지정한 문자열을 출력한 후 첫 번째 인자인 sig로 지정한 시그널을 가리키는 이름을 붙여 표준 오류로 출력 <br><br><span>- 시그널 정보 출력&nbsp;: strsignal(3) <br></span><span></span><!-- } SE3-TEXT --></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="se_component se_code default" id="SEDOC-1512350174371--1649914949_code_24">
+    <div class="se_sectionArea">
+        <div class="se_editArea">
+            <div class="se_viewArea se_fs_T3 ">
+                <div class="se_editView" >
+                    <div class="se_textView">
+                        <div class="__se_code_view se_textarea language-javascript">#include &lt; string.h &gt; &#10;char *strsignal (int sig); &#10;// sig : 정보를 출력할 시그널</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/data" class="__se_module_data" data-module='{"type":"v1_code", "docVersion" : "1.0", "id" :"SEDOC-1512350174371--1649914949_code_24" , "data" : { "baseElId" : "SEDOC-1512350174371--1649914949_code_24"}}'></script>
+
+
+
+
+    
+
+
+
+
+
+
+
+
+<div class="se_component se_paragraph default">
+    <div class="se_sectionArea">
+        <div class="se_editArea">
+            <div class="se_viewArea se_ff_nanumgothic se_fs_T3 se_align-left" >
+                <div class="se_editView">
+                    <div class="se_textView">
+                        <p class="se_textarea"><!-- SE3-TEXT { -->- 인자로 받은 시그널을 가리키는 이름을 문자열로 리턴 (인자로 받은 시그널이 없으면 NULL 리턴) <!-- } SE3-TEXT --></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+<div class="se_component se_sectionTitle ">
+    <div class="se_sectionArea se_align-left">
+        <div class="se_editArea">
+            <div class="se_viewArea se_ff_nanumgothic se_fs_H1 "
+            			style="color: ;
+                        text-decoration: inherit;
+                        font-style: inherit;
+                        ">
+                <div class="se_editView">
+                    <div class="se_textView">
+                        <h4 class="se_textarea"><!-- SE3-TEXT { -->시그널 블록킹과 해제 <!-- } SE3-TEXT --></h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+<div class="se_component se_paragraph default">
+    <div class="se_sectionArea">
+        <div class="se_editArea">
+            <div class="se_viewArea se_ff_nanumgothic se_fs_T3 se_align-left" >
+                <div class="se_editView">
+                    <div class="se_textView">
+                        <p class="se_textarea"><!-- SE3-TEXT { --><span>- 시그널 불록과 해제&nbsp;: sighold(3), sigrelse(3) <br></span><span></span><!-- } SE3-TEXT --></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="se_component se_code default" id="SEDOC-1512350174371--1649914949_code_25">
+    <div class="se_sectionArea">
+        <div class="se_editArea">
+            <div class="se_viewArea se_fs_T3 ">
+                <div class="se_editView" >
+                    <div class="se_textView">
+                        <div class="__se_code_view se_textarea language-javascript">#include &lt; signal.h &gt; &#10;int sighold (int sig); &#10;int sigrelse (int sig); &#10;// sig : 블록하거나 해제할 시그널 </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/data" class="__se_module_data" data-module='{"type":"v1_code", "docVersion" : "1.0", "id" :"SEDOC-1512350174371--1649914949_code_25" , "data" : { "baseElId" : "SEDOC-1512350174371--1649914949_code_25"}}'></script>
+
+
+
+
+    
+
+
+
+
+
+
+
+
+<div class="se_component se_paragraph default">
+    <div class="se_sectionArea">
+        <div class="se_editArea">
+            <div class="se_viewArea se_ff_nanumgothic se_fs_T3 se_align-left" >
+                <div class="se_editView">
+                    <div class="se_textView">
+                        <p class="se_textarea"><!-- SE3-TEXT { --><span>- sighold&nbsp;: 인자로 받은 시그널을 프로세스의 시그널 마스크(Signal mask)에 추가 <br></span><span>&nbsp; &nbsp; - 마스크에 추가된 시그널은 블록되어 해당 시그널을 받지 않음 </span><br>- sigrelse&nbsp;: 프로세스의 시그널 마스크에서 시그널 해제 <br><br><span>- 시그널 집합 블록과 해제&nbsp;: sigprocmask(2) <br></span><span></span><!-- } SE3-TEXT --></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="se_component se_code default" id="SEDOC-1512350174371--1649914949_code_26">
+    <div class="se_sectionArea">
+        <div class="se_editArea">
+            <div class="se_viewArea se_fs_T3 ">
+                <div class="se_editView" >
+                    <div class="se_textView">
+                        <div class="__se_code_view se_textarea language-javascript">#include &lt; signal.h &gt; &#10;int sigprocmask (int how, const sigset_t *restrict set, sigset_t *restrict oset); </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/data" class="__se_module_data" data-module='{"type":"v1_code", "docVersion" : "1.0", "id" :"SEDOC-1512350174371--1649914949_code_26" , "data" : { "baseElId" : "SEDOC-1512350174371--1649914949_code_26"}}'></script>
+
+
+
+
+    
+
+
+
+
+
+
+
+
+<div class="se_component se_paragraph default">
+    <div class="se_sectionArea">
+        <div class="se_editArea">
+            <div class="se_viewArea se_ff_nanumgothic se_fs_T3 se_align-left" >
+                <div class="se_editView">
+                    <div class="se_textView">
+                        <p class="se_textarea"><!-- SE3-TEXT { --><span>- how&nbsp;: 시그널을 블록할 것인지, 해제할 것인지 여부. 다음과 같은 값이 올 수 있음 <br></span><span>&nbsp; - SIG_BLOCK&nbsp;: set에 지정한 시그널 집합을 시그널 마스크에 추가 </span><br>&nbsp; - SIG_UNBLOCK&nbsp;: set에 지정한 시그널 집합을 시그널 마스크에서 제거 <br>&nbsp; - SIG_SETMASK&nbsp;: set에 지정한 시그널 집합으로 현재 시그널 마스크를 대체 <br>- set은 블록하거나 해제할 시그널 집합을 가리킴(주소) <br>- oset은 NULL 또는 이전 설정값이 저장됨 <!-- } SE3-TEXT --></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+<div class="se_component se_sectionTitle ">
+    <div class="se_sectionArea se_align-left">
+        <div class="se_editArea">
+            <div class="se_viewArea se_ff_nanumgothic se_fs_H1 "
+            			style="color: ;
+                        text-decoration: inherit;
+                        font-style: inherit;
+                        ">
+                <div class="se_editView">
+                    <div class="se_textView">
+                        <h4 class="se_textarea"><!-- SE3-TEXT { -->시그널 기다리기 <!-- } SE3-TEXT --></h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+<div class="se_component se_paragraph default">
+    <div class="se_sectionArea">
+        <div class="se_editArea">
+            <div class="se_viewArea se_ff_nanumgothic se_fs_T3 se_align-left" >
+                <div class="se_editView">
+                    <div class="se_textView">
+                        <p class="se_textarea"><!-- SE3-TEXT { --><span>- 시그널 대기&nbsp;: sigpause(3) <br></span><span></span><!-- } SE3-TEXT --></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="se_component se_code default" id="SEDOC-1512350174371--1649914949_code_27">
+    <div class="se_sectionArea">
+        <div class="se_editArea">
+            <div class="se_viewArea se_fs_T3 ">
+                <div class="se_editView" >
+                    <div class="se_textView">
+                        <div class="__se_code_view se_textarea language-javascript">#include &lt; signal.h &gt; &#10;int sigpause (int sig); </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/data" class="__se_module_data" data-module='{"type":"v1_code", "docVersion" : "1.0", "id" :"SEDOC-1512350174371--1649914949_code_27" , "data" : { "baseElId" : "SEDOC-1512350174371--1649914949_code_27"}}'></script>
+
+
+
+
+    
+
+
+
+
+
+
+
+
+<div class="se_component se_paragraph default">
+    <div class="se_sectionArea">
+        <div class="se_editArea">
+            <div class="se_viewArea se_ff_nanumgothic se_fs_T3 se_align-left" >
+                <div class="se_editView">
+                    <div class="se_textView">
+                        <p class="se_textarea"><!-- SE3-TEXT { -->- 인자로 지정한 시그널을 프로세스의 시그널 마스크에서 제거하고 프로세스가 시그널을 받을 때까지 기다림 <br><br><span>- 시그널 기다리기&nbsp;: sigsuspend(2) <br></span><span></span><!-- } SE3-TEXT --></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="se_component se_code default" id="SEDOC-1512350174371--1649914949_code_28">
+    <div class="se_sectionArea">
+        <div class="se_editArea">
+            <div class="se_viewArea se_fs_T3 ">
+                <div class="se_editView" >
+                    <div class="se_textView">
+                        <div class="__se_code_view se_textarea language-javascript">#include &lt; signal.h &gt; &#10;int sigsuspend (const sigset_t *set) &#10;// set : 기다리려는 시그널을 지정한 시그널 집합의 주소 </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/data" class="__se_module_data" data-module='{"type":"v1_code", "docVersion" : "1.0", "id" :"SEDOC-1512350174371--1649914949_code_28" , "data" : { "baseElId" : "SEDOC-1512350174371--1649914949_code_28"}}'></script>
+
+
+
+
+    
+
+
+
+
+
+
+
+
+<div class="se_component se_paragraph default">
+    <div class="se_sectionArea">
+        <div class="se_editArea">
+            <div class="se_viewArea se_ff_nanumgothic se_fs_T3 se_align-left" >
+                <div class="se_editView">
+                    <div class="se_textView">
+                        <p class="se_textarea"><!-- SE3-TEXT { -->- 인자로 지정한 시그널 집합에 설정된시그널들로 프로세스의 시그널 마스크를 교체 <br>- 블록되지 않은 시그널이 도착할 대까지 프로세스의 수행을 멈추고 기다림 <br>- 시그널이 도착하면 프로세스의 시그널 마스크는 이전 설정으로 되돌아감 <!-- } SE3-TEXT --></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+<div class="se_component se_sectionTitle ">
+    <div class="se_sectionArea se_align-left">
+        <div class="se_editArea">
+            <div class="se_viewArea se_ff_nanumgothic se_fs_H1 "
+            			style="color: ;
+                        text-decoration: inherit;
+                        font-style: inherit;
+                        ">
+                <div class="se_editView">
+                    <div class="se_textView">
+                        <h4 class="se_textarea"><!-- SE3-TEXT { -->기타 시그널 관련 함수 <!-- } SE3-TEXT --></h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+<div class="se_component se_paragraph default">
+    <div class="se_sectionArea">
+        <div class="se_editArea">
+            <div class="se_viewArea se_ff_nanumgothic se_fs_T3 se_align-left" >
+                <div class="se_editView">
+                    <div class="se_textView">
+                        <p class="se_textarea"><!-- SE3-TEXT { --><span>- 시그널 보내기&nbsp;: sigsend(2) <br></span><span></span><!-- } SE3-TEXT --></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="se_component se_code default" id="SEDOC-1512350174371--1649914949_code_29">
+    <div class="se_sectionArea">
+        <div class="se_editArea">
+            <div class="se_viewArea se_fs_T3 ">
+                <div class="se_editView" >
+                    <div class="se_textView">
+                        <div class="__se_code_view se_textarea language-javascript">#include &lt; signal.h &gt; &#10;int sigsend (idtype_t idtype, id_t id, int sig); &#10;// idtype : id에 지정한 값의 종류 // id : 시그널을 받을 프로세스나 프로세스 그룹 // sig : 보내려는 시그널 </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/data" class="__se_module_data" data-module='{"type":"v1_code", "docVersion" : "1.0", "id" :"SEDOC-1512350174371--1649914949_code_29" , "data" : { "baseElId" : "SEDOC-1512350174371--1649914949_code_29"}}'></script>
+
+
+
+
+    
+
+
+
+
+
+
+
+
+<div class="se_component se_paragraph default">
+    <div class="se_sectionArea">
+        <div class="se_editArea">
+            <div class="se_viewArea se_ff_nanumgothic se_fs_T3 se_align-left" >
+                <div class="se_editView">
+                    <div class="se_textView">
+                        <p class="se_textarea"><!-- SE3-TEXT { -->- sig로 지정한 시그널을 id에 지정한 프로세스나 프로세스 그룹에 보냄 <br>- idtype은 id에 지정한 값의 의미를 알려줌 <br>- sigsend 함수가 kill 함수와 다른점은 특정 프로세스 뿐만 아니라 프로세스 그룹 등 시그널을 받을 대상을 다양하게 지정할 수 있음 <br>- idtype은 다음 인자로 사용 할 수 있음 <!-- } SE3-TEXT --></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="se_component se_table default">
+        <div class="se_sectionArea se_align-left">
+            <div class="se_editArea">
+                <div id="SEDOC-1512350174371--1649914949_table_1" data-attachment-id="" class="se_table_wrap">
+                    <div class="se_table_innerWrap">
+                        <table class="se_table_col" style="width:100%;">
+                            <tbody>
+                                <tr>
+                                    <td class="se_cell se_align-left" colspan="1" rowspan="1"
+                                    style="width:50.0%;height:44.0px;background-color:;">
+                                        <div class="se_cellArea"> 값 </div>
+                                    </td>
+                                    <td class="se_cell se_align-left" colspan="1" rowspan="1"
+                                    style="width:50.0%;height:44.0px;background-color:;">
+                                        <div class="se_cellArea"> 의미 </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="se_cell se_align-left" colspan="1" rowspan="1"
+                                    style="width:50.0%;height:44.0px;background-color:;">
+                                        <div class="se_cellArea"> P_PID </div>
+                                    </td>
+                                    <td class="se_cell se_align-left" colspan="1" rowspan="1"
+                                    style="width:50.0%;height:44.0px;background-color:;">
+                                        <div class="se_cellArea"> 프로세스 ID가 id인 프로세스에 시그널을 보냄 </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="se_cell se_align-left" colspan="1" rowspan="1"
+                                    style="width:50.0%;height:44.0px;background-color:;">
+                                        <div class="se_cellArea"> P_PGID </div>
+                                    </td>
+                                    <td class="se_cell se_align-left" colspan="1" rowspan="1"
+                                    style="width:50.0%;height:44.0px;background-color:;">
+                                        <div class="se_cellArea"> 프로세스 그룹 ID가 id인 모든 프로세스에 시그널을 보냄 </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="se_cell se_align-left" colspan="1" rowspan="1"
+                                    style="width:50.0%;height:44.0px;background-color:;">
+                                        <div class="se_cellArea"> P_SID </div>
+                                    </td>
+                                    <td class="se_cell se_align-left" colspan="1" rowspan="1"
+                                    style="width:50.0%;height:44.0px;background-color:;">
+                                        <div class="se_cellArea"> 세션 ID가 id인 모든 프로세스에 시그널을 보냄 </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="se_cell se_align-left" colspan="1" rowspan="1"
+                                    style="width:50.0%;height:44.0px;background-color:;">
+                                        <div class="se_cellArea"> P_TASKID </div>
+                                    </td>
+                                    <td class="se_cell se_align-left" colspan="1" rowspan="1"
+                                    style="width:50.0%;height:44.0px;background-color:;">
+                                        <div class="se_cellArea"> 태스크 ID가 id인 모든 프로세스에 시그널을 보냄 </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="se_cell se_align-left" colspan="1" rowspan="1"
+                                    style="width:50.0%;height:61.0px;background-color:;">
+                                        <div class="se_cellArea"> P_UID </div>
+                                    </td>
+                                    <td class="se_cell se_align-left" colspan="1" rowspan="1"
+                                    style="width:50.0%;height:61.0px;background-color:;">
+                                        <div class="se_cellArea"> 유효사용자 ID(EUID)가 id인 모든 프로세스에 시그널을 보냄 </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="se_cell se_align-left" colspan="1" rowspan="1"
+                                    style="width:50.0%;height:44.0px;background-color:;">
+                                        <div class="se_cellArea"> P_GID </div>
+                                    </td>
+                                    <td class="se_cell se_align-left" colspan="1" rowspan="1"
+                                    style="width:50.0%;height:44.0px;background-color:;">
+                                        <div class="se_cellArea"> 유효 그룹 ID(EGID)가 id인 모든 프로세스에 시그널을 보냄 </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="se_cell se_align-left" colspan="1" rowspan="1"
+                                    style="width:50.0%;height:44.0px;background-color:;">
+                                        <div class="se_cellArea"> P_PROJID </div>
+                                    </td>
+                                    <td class="se_cell se_align-left" colspan="1" rowspan="1"
+                                    style="width:50.0%;height:44.0px;background-color:;">
+                                        <div class="se_cellArea"> 프로젝트 ID가 id인 모든 프로세스에 시그널을 보냄 </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="se_cell se_align-left" colspan="1" rowspan="1"
+                                    style="width:50.0%;height:44.0px;background-color:;">
+                                        <div class="se_cellArea"> P_CID </div>
+                                    </td>
+                                    <td class="se_cell se_align-left" colspan="1" rowspan="1"
+                                    style="width:50.0%;height:44.0px;background-color:;">
+                                        <div class="se_cellArea"> 스케줄러 클래스 ID가 id인 모든 프로세스에 시그널을 보냄 </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="se_cell se_align-left" colspan="1" rowspan="1"
+                                    style="width:50.0%;height:61.0px;background-color:;">
+                                        <div class="se_cellArea"> P_CTID </div>
+                                    </td>
+                                    <td class="se_cell se_align-left" colspan="1" rowspan="1"
+                                    style="width:50.0%;height:61.0px;background-color:;">
+                                        <div class="se_cellArea"> 프로세스 콘트랙트 ID가 id인 모든 프로세스에 시그널을 보냄 </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="se_cell se_align-left" colspan="1" rowspan="1"
+                                    style="width:50.0%;height:44.0px;background-color:;">
+                                        <div class="se_cellArea"> P_ALL </div>
+                                    </td>
+                                    <td class="se_cell se_align-left" colspan="1" rowspan="1"
+                                    style="width:50.0%;height:44.0px;background-color:;">
+                                        <div class="se_cellArea"> id를 무시하고 모든 프로세스에 시그널을 보냄 </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="se_cell se_align-left" colspan="1" rowspan="1"
+                                    style="width:50.0%;height:44.0px;background-color:;">
+                                        <div class="se_cellArea"> P_MYID </div>
+                                    </td>
+                                    <td class="se_cell se_align-left" colspan="1" rowspan="1"
+                                    style="width:50.0%;height:44.0px;background-color:;">
+                                        <div class="se_cellArea"> 함수를 호출하는 자신에게 시그널을 보냄 </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/data" class="__se_module_data" data-module='{"type":"v1_table", "docVersion" : "1.0", "id" :"SEDOC-1512350174371--1649914949_table_1" , "data" : { "baseElId" : "SEDOC-1512350174371--1649914949_table_1", "columnCount": "2"}}'></script>
+
+
+
+    
+
+
+
+
+
+
+
+
+<div class="se_component se_paragraph default">
+    <div class="se_sectionArea">
+        <div class="se_editArea">
+            <div class="se_viewArea se_ff_nanumgothic se_fs_T3 se_align-left" >
+                <div class="se_editView">
+                    <div class="se_textView">
+                        <p class="se_textarea"><!-- SE3-TEXT { -->- PID가 0인 프로세스는 시그널을 보내는 대상에서 항상 제외 <br>- P_PID로 직접 지정할때를 제외하고 PID가 1인 프로세스에 시그널을 보내는것도 제외 <br><br><span>- 시그널 무시 처리&nbsp;: sigignore(3) <br></span><span></span><!-- } SE3-TEXT --></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="se_component se_code default" id="SEDOC-1512350174371--1649914949_code_30">
+    <div class="se_sectionArea">
+        <div class="se_editArea">
+            <div class="se_viewArea se_fs_T3 ">
+                <div class="se_editView" >
+                    <div class="se_textView">
+                        <div class="__se_code_view se_textarea language-javascript">#include &lt; signal.h &gt; &#10;int sigignore (int sig); &#10;// sig : 무시할 시그널 </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/data" class="__se_module_data" data-module='{"type":"v1_code", "docVersion" : "1.0", "id" :"SEDOC-1512350174371--1649914949_code_30" , "data" : { "baseElId" : "SEDOC-1512350174371--1649914949_code_30"}}'></script>
+
+
+
+
+    
+
+
+
+
+
+
+
+
+<div class="se_component se_paragraph default">
+    <div class="se_sectionArea">
+        <div class="se_editArea">
+            <div class="se_viewArea se_ff_nanumgothic se_fs_T3 se_align-left" >
+                <div class="se_editView">
+                    <div class="se_textView">
+                        <p class="se_textarea"><!-- SE3-TEXT { -->- 인자로 지정한 시그널의 처리방법을 SIG_IGN으로 설정 <!-- } SE3-TEXT --></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
