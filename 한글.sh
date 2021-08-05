@@ -1,5 +1,6 @@
 //리눅스 한글
 //스크립트 작성
+//vscode에선 korean 설치
 //ibus-setup -> 입력기(input method)에서 한글 추가
 #!/bin/bash
 setkeycodes 72 122
