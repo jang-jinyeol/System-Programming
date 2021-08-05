@@ -1,3 +1,382 @@
+
+
+
+
+
+
+<!doctype html>
+<html lang="ko">
+<head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
+
+
+
+
+
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,target-densitydpi=medium-dpi,viewport-fit=cover">
+
+<meta name="robots" content="index,follow"/>
+
+
+
+<link rel="icon" type="image/png" href="/favicon_192x192.png?1">
+
+<link rel="apple-touch-icon-precomposed" href="/mobileweb_icon_96.png?1" />
+
+<link rel="stylesheet" type="text/css" href="https://ssl.pstatic.net/t.static.blog/nmobile/versioning/lego_w-40754500_https.css" charset="UTF-8" />
+<link rel="stylesheet" type="text/css" href="https://ssl.pstatic.net/t.static.blog/nmobile/versioning/lego_view-316504699_https.css" charset="UTF-8" />
+<style>
+	div.spi_unity {
+		width:291px;
+	}
+</style>
+
+
+
+
+
+ 
+
+	
+		<meta property="og:title" content="Chapter 7. 시그널"/>
+
+		
+			
+			
+			<meta property="og:image" content="https://blogimgs.pstatic.net/nblog/mylog/post/og_default_image_160610.png"/>
+			
+		
+        <meta property="og:description" content="시그널의 개념 - 프로세스에 뭔가 발생했음을 알리는 간단한 메시지를 비동기적으로 보내는 것 - 메시지는 ..."/>
+
+		
+			<meta property="og:url" content="https://blog.naver.com/gaechuni/221154760245"/>
+		
+	
+	
+
+<meta property="me:feed:serviceId" content="blog" />
+
+
+	
+
+
+
+    
+
+
+
+<meta name="referrer" content="always">
+<meta property="og:type" content="article" />
+<meta property="og:article:author"
+      content="음성/오디.. | 블로그"/>
+<meta class="_og_tag _author" property="og:site_name"
+	content="네이버 블로그 | 음성/오디오 신호처리 연구소" />
+<meta property="naverblog:nickname" content="Hidden Sound" />
+<meta property="naverblog:profile_image" content="https://blogpfthumb-phinf.pstatic.net/MjAyMDAzMDRfMjQ0/MDAxNTgzMjc5OTIwMDA0.b8uV7K0S_1G21uemJXXQYXQ3pQBLXked-JmKan4L2UAg.jcbcVMnwxpw180Wx9sZBCsOCh9uLSnx_zKfub7qWVG4g.JPEG.gaechuni/%25C4%25B8%25C3%25B3.JPG?type=s1" />
+
+<meta property="me:feed:serviceId" content="blog" />
+<meta name="format-detection" content="telephone=no" />
+
+
+<meta name="napp-site-analysis" content="gdid=90000003_00000000000000337DD9D635,service=blog,collection=blog" />
+
+
+
+	<link rel="stylesheet" type="text/css" href="https://editor-static.pstatic.net/v/blog/css/se_viewer_blog_mobile.css?v=1.25.0">
+
+
+    <link rel="stylesheet" href="/css/lego/photoviewer/image-viewer.css" /> 
+    <title>Chapter 7. 시그널 : 네이버 블로그</title>
+</head>
+<body id="body" class="tablet_end" >
+<div style="display:none">
+    <img src="https://ssl.pstatic.net/static/blog/sp_blog72.png" width="1" height="1"/>
+    
+        <img src="https://ssl.pstatic.net/static/blog/sp_blog_se3_6.png" width="1" height="1"/>
+    
+</div>
+<div class="_ngApp">
+  <bg-drawer-menu bg-drawer-pc-url="https://blog.naver.com/gaechuni/221154760245?viewType=pc" bg-drawer-menu-btn="._openDrawer" bg-drawer-app-link-type="postViewDirect" bg-drawer-app-params-json="{&quot;logNo&quot;:221154760245}"></bg-drawer-menu>
+</div>
+
+<div class="u_skip"><a href="#ct">본문 바로가기</a></div>
+<div class="Ngnb gnb_bg_white" style="will-change: contents;">
+	<div class="Ngnb_service logo_blog_green">
+		<h1 class="Nservice_item">
+			
+				
+				
+					<a href="/Recommendation.naver"><span class="Nicon_service">블로그</span></a>
+				
+			
+		</h1>
+		<h2 class="gnb_title">
+            <div class="center">
+ 				<span class="td">
+ 					<a href="#" id="_categoryName" class="_cur_category _returnFalse" onclick="nclk(this, 'pgn.blogname', '', '');">
+ 						<span class="sp ico">카테고리 이동</span>
+ 					</a>
+ 				</span>
+                <span class="td">
+ 					<a href="/PostList.naver?blogId=gaechuni" onclick="nclk(this, 'pgn.eachhome', '', '');">
+ 						<span class="ell">음성/오디오 신호처리 연구소</span>
+ 					</a>
+ 				</span>
+            </div>
+		</h2>
+	</div>
+	<div class="Ngnb_tool">
+		
+		<a href="/PostSearchList.naver?blogId=gaechuni" class="Ntool_button"><span class="Nicon_search">검색</span></a>
+		<button type="button" class="Ntool_button _openDrawer _returnFalse" onclick="nclk(this, 'pgn.qmenu', '', '');"><span class="Nicon_drawer">MY메뉴 열기</span></button>
+	</div>
+</div>
+
+<div id="post_share" style="position:absolute;top:50px;display:none;z-index:2000;right:15px">
+	<div id="spiLayer"></div>
+</div>
+
+<div id="_post_area" class="ct_wrap">
+	<div id="ct" class="end" role="main" style="overflow:hidden;">
+        
+		    
+
+
+
+
+
+
+<div id="_post_property" style="display:none"
+commentCount="0"
+blockType="0"		
+isBlacklistUser="false"	
+blogName="음성/오디오 신호처리 연구소"
+commentEnable="true"
+categoryNo="63"
+logType="0"
+addDate="1512345237873"
+hasNaverMap="false"
+gdid="90000003_00000000000000337DD9D635"
+browserTitle="Chapter 7. 시그널 : 네이버 블로그"
+isRecommendableBlog="true"
+attachFilePunishInfo='{}'
+attachVideoInfo = '[ ]'
+editorversion='3'
+supportSE3='true'
+relationTypeWithBlog='4'
+uri="http://blog.naver.com/gaechuni/221154760245"
+directoryName=""
+blogUserStatAllow = "false"
+></div>
+<div id="_photo_view_property" style="display: none"
+	 attachImagePathAndIdInfo = '[]'
+	 blogId = 'gaechuni'
+	 logNo = '221154760245'
+	 title = 'Chapter 7. 시그널'
+	 editorversion='3'
+></div>
+
+<div id="_floating_menu_property" style="display: none"
+	 blogId='gaechuni'
+	 logNo='221154760245'
+	 formattedCommentCount ='0'
+	 newReplyComment='false'
+	 logType='0'
+	 commentEnable ='true'
+	 postTitle = 'Chapter 7. 시그널'
+	 sympathyEnable='true'
+	 postUrl= 'https://m.blog.naver.com/PostView.naver?blogId=gaechuni&logNo=221154760245'
+></div>
+
+   
+	
+		 
+		 
+		
+			
+			
+			
+		
+	
+
+
+<div class="_postView">
+	<!-- 폰트 사이즈 셋팅 -->
+	
+	
+		
+		
+		
+		
+		
+		
+	
+
+	
+	
+	
+
+	
+
+	
+	<div class="post_ct   se3_view " id="viewTypeSelector">
+		
+		
+
+		
+
+		
+		<div style="font-size:10pt; font-family:'957317_10';" class="view"><div id="SEDOC-1512350174371--1649914949" class="se_doc_viewer se_body_wrap se_theme_transparent se_m" data-docversion="">
+<div class="se_doc_header_start" id="SEDOC-1512350174371--1649914949_se_doc_header_start"></div>
+<!-- SE_DOC_HEADER_START -->
+<div id="SEDOC-1512350174371--1649914949_viewer_head" class="se_viewer_head"></div>
+<div class="se_component_wrap">
+<div class="se_component se_documentTitle documentTitle_blog  is-fill">
+    <div class="se_sectionArea is-fill se_align-left">
+        <!-- --> 
+<div class="blog_category"><a href="/PostList.naver?blogId=gaechuni&categoryNo=63&logCode=0&categoryName=Unix+system" onclick="nclk(this, 'pst.board', '', '');">Unix system</a></div>
+<!-- -->
+        <!-- SE_DOC_HEADER_TITLE_TOP-->
+     	<div id="SEDOC-1512350174371--1649914949_se_doc_title_top" class="se_doc_title_top"></div>
+        <div class="se_editArea">
+        	<div class="se_viewArea se_ff_nanumgothic se_fs_D2">
+	            <div class="se_editView se_title">
+	                <div class="se_textView">
+                        <h3 class="se_textarea">
+                            <!-- -->Chapter 7. 시그널<!-- -->
+                            
+                        </h3>
+                        
+                        
+	                </div>
+	            </div>
+	        </div>
+        </div><!-- SE_DOC_HEADER_TITLE_MIDDLE-->
+        <div id="SEDOC-1512350174371--1649914949_se_doc_title_middle" class="se_doc_title_middle"></div>
+        <!-- SE_DOC_HEADER_CONTENTS_START -->
+        <!-- -->
+<div class="blog_authorArea">
+
+	<a href="/PostList.naver?blogId=gaechuni" class="blog_thumbnail" onclick="nclk(this, 'pst.writer', '', '');">
+
+		<span class="img"><img src="https://blogpfthumb-phinf.pstatic.net/MjAyMDAzMDRfMjQ0/MDAxNTgzMjc5OTIwMDA0.b8uV7K0S_1G21uemJXXQYXQ3pQBLXked-JmKan4L2UAg.jcbcVMnwxpw180Wx9sZBCsOCh9uLSnx_zKfub7qWVG4g.JPEG.gaechuni/%25C4%25B8%25C3%25B3.JPG?type=s1" width="35" height="35" alt="프로필"></span>
+	</a>
+	<div class="blog_author">
+		<a href="/PostList.naver?blogId=gaechuni" onclick="nclk(this, 'pst.writer', '', '');"><strong class="ell">Hidden Sound</strong></a>
+	</div>
+	<p class="blog_date">2017. 12. 4. 8:53
+	</p>
+</div>
+
+<div class="blog_btnArea">
+		<a href="#" class="btn_buddyadd _buddyadd_default _add_buddy _param(gaechuni|false||/BuddyAddForm.naver) _returnFalse" isBlackUser="false" onclick="nclk(this, 'pst.add', '', '');"><span class="sp"></span> 이웃추가</a>
+
+<!-- 본문 기타 기능 -->
+<div class="post_function_t1">
+<button type="button" class="btn_function _btn_tools" onclick="nclk(this, 'pst.func', '', '');"><span class="sim">본문 기타 기능</span></button>
+	<div class="lyr_post_function" id="_tools_layer" style="display:none">
+		<ul>
+			<li class="font_size">
+				<strong class="blind">본문 폰트 크기 조정</strong>
+				<button type="button" class="btn_font_s _smallFont  " id="moreSmall" onclick="nclk(this, 'pst.ftxts', '', '');"><span class="sim">본문 폰트 크기 작게 보기</span></button>
+				<button type="button" class="btn_font_b _bigFont  " id="moreBig" onclick="nclk(this, 'pst.ftxtl', '', '');"><span class="sim">본문 폰트 크기 크게 보기</span></button>
+				<span class="size  " id="font_size">가</span>
+			</li>
+			<li>
+				<div class="btn_like_w like_btn">
+					<!-- [D]  좋아요 시스템 -->
+						<div class="u_likeit_list_module _reactionModule" data-sid="BLOG" data-did="BLOG" data-cid="gaechuni_221154760245" data-catgid="post">
+							<a href="#" class="u_likeit_list_btn _button" data-type="like" data-log="pst.flike|pst.funlike">
+								<span class="u_ico _icon"></span> <em class="u_txt _label">공감하기</em>
+							</a>
+						</div>
+					<!-- //[D]  좋아요 시스템 -->
+				</div>
+			</li>
+				<li><a href="#" class="naver-splugin _returnFalse" onclick="nclk(this, 'pst.fshare', '', '');"
+					data-style="standard"
+					data-url="https://m.blog.naver.com/gaechuni/221154760245"
+					data-title="Chapter 7. 시그널"
+                    data-likeServiceId="BLOG"
+                    data-likeContentsId="gaechuni_221154760245"
+                    data-canonical-url="https://m.blog.naver.com/gaechuni/221154760245"
+					data-oninitialize="splugin_oninitialize();"
+					data-friend-display="on"
+					data-kakaostory-display="off"
+					data-prevent-short-url="on">공유하기 <span class="share sim"></span>
+					</a>
+				</li>
+				<li><a href="#" class="_copy_url _returnFalse" onclick="nclk(this, 'pst.furl', '', '');">URL복사 <span class="copy sim"></span></a></li>
+			<li><a href="#" class="_goTrans">번역하기 <span class="translate sim"></span></a></li>
+				<li><a href="https://m.blog.naver.com/PostBadReport.naver?type=rprtMobileFrm&logNo=221,154,760,245&blogId=gaechuni&retUrl=https%3A%2F%2Fm.blog.naver.com%2Fgaechuni%2F221154760245" onclick="nclk(this, 'pst.report', '', '');">신고 <span class="report sim"></span></a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<!-- //본문 기타 기능 -->
+
+<!-- -->
+        <!-- SE_DOC_HEADER_CONTENTS_END -->
+        <!-- SE_DOC_HEADER_TITLE_BOTTOM-->
+        <div id="SEDOC-1512350174371--1649914949_se_doc_title_bottom" class="se_doc_title_bottom"></div>
+    </div>
+</div>
+
+</div>
+<!-- B2C 상품 -->
+
+<!-- _BLOG_CONTENTS_HEADER_TAIL -->
+<!-- SE_DOC_HEADER_END -->
+<div class="se_doc_header_end" id="SEDOC-1512350174371--1649914949_se_doc_header_end"></div>
+<div class="se_doc_contents_start" id="SEDOC-1512350174371--1649914949_se_doc_contents_start"></div>
+<!-- SE_DOC_CONTENTS_START -->
+<div class="se_component_wrap sect_dsc __se_component_area">
+    
+
+
+
+
+
+
+
+
+<div class="se_component se_paragraph default">
+    <div class="se_sectionArea">
+        <div class="se_editArea">
+            <div class="se_viewArea se_ff_nanumgothic se_fs_T3 se_align-left" >
+                <div class="se_editView">
+                    <div class="se_textView">
+                        <p class="se_textarea"><!-- SE3-TEXT { --><!-- } SE3-TEXT --></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
 <div class="se_component se_sectionTitle ">
     <div class="se_sectionArea se_align-left">
         <div class="se_editArea">
@@ -3920,3 +4299,897 @@
     </div>
 </div>
 
+
+
+
+
+
+
+
+
+
+
+
+</div>
+<!-- SE_DOC_CONTENTS_END -->
+<div class="__se_doc_title_end" id="se_doc_contents_end"></div>
+<div id="SEDOC-1512350174371--1649914949_se_doc_footer" class="se_doc_footer"></div>
+</div></div>
+		
+
+		
+	</div>
+
+	
+	
+	
+	
+	
+	
+		
+	
+	
+	
+
+	
+	
+  <div class="section_t1">
+    <div class="section_w">
+      
+        <div class="btn_like_w">
+          <div class="btn_like">
+            <!-- [D]  좋아요 시스템 -->
+			  <div class="u_likeit_list_module _reactionModule" data-sid="BLOG" data-did="BLOG" data-cid="gaechuni_221154760245" data-catgid="post">
+				  <a href="#" class="u_likeit_list_btn _button _sympathyBtn" data-type="like" data-log="pst.like|pst.unlike" data-isHiddenZeroCount="false" _returnFalse>
+					  <span class="u_ico _icon"></span>
+					  <em class="u_cnt _count"></em>
+				  </a>
+			  </div>
+            <!-- //[D]  좋아요 시스템 -->
+          </div>
+          <a href="/SympathyHistoryList.naver?blogId=gaechuni&logNo=221154760245&categoryId=POST" class="btn_like_more"
+             onclick="nclk(this, 'pst.liken', '', '');" style="display: none;"><span class="sp">공감한 사람 보러가기</span>
+          </a>
+        </div>
+      
+      <div class="btn_r">
+        
+          <a href="/CommentList.naver?blogId=gaechuni&logNo=221154760245" class="btn_reply"
+             onclick="nclk(this, 'pst.re', '', '');">
+            <span class="sp ico">댓글</span> <em>0</em>
+          </a>
+        
+        <a class="naver-splugin btn_share _returnFalse" onclick="nclk(this, 'pst.share', '', '');"
+           data-style="standard"
+           data-url="https://m.blog.naver.com/gaechuni/221154760245"
+           data-title="Chapter 7. 시그널"
+           data-likeServiceId="BLOG"
+           data-likeContentsId="gaechuni_221154760245"
+           data-canonical-url="https://m.blog.naver.com/gaechuni/221154760245"
+           data-oninitialize="splugin_oninitialize();"
+		   data-friend-display="on"
+		   data-kakaostory-display="off"
+           data-prevent-short-url="on"><span class="sp ico" style="pointer-events:none">공유하기</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  
+  
+  <div class="post_writer">
+    <div class="post_writer_wrap">
+      <a href="/gaechuni" onclick="nclk(this, 'pst.pfwriter', '', '');" class="link">
+        <div class="thumb">
+          <span class="img"><img src="https://blogpfthumb-phinf.pstatic.net/MjAyMDAzMDRfMjQ0/MDAxNTgzMjc5OTIwMDA0.b8uV7K0S_1G21uemJXXQYXQ3pQBLXked-JmKan4L2UAg.jcbcVMnwxpw180Wx9sZBCsOCh9uLSnx_zKfub7qWVG4g.JPEG.gaechuni/%25C4%25B8%25C3%25B3.JPG?type=s1" width="48" height="48" alt="Hidden Sound"></span>
+          
+          
+        </div>
+        <div class="txt">
+          
+          <strong class="writer">Hidden Sound</strong>
+			   <span class="blog_subject">IT·컴퓨터</span> 
+          <p class="dsc">행복하세요</p>
+        </div>
+      </a>
+      <div class="btn_area">
+        
+          
+          
+          
+          
+            <span class="btn add_buddy"><a href="#" class="_add_buddy _param(gaechuni|false||/BuddyAddForm.naver) _returnFalse" isBlackUser="false" onclick="nclk(this, 'pst.pfaddn', '', '');"><span class="sp"></span>이웃추가</a></span>
+          
+        
+        
+        
+      </div>
+      
+      
+    </div>
+  </div>
+  
+
+  
+  <div class="lst_t16" id="_recentPostList" style="display: none;">
+
+  </div>
+  
+
+  
+  
+
+  
+  <div class="lst_t17 lst_m _relatedCategoryPostListArea" style="display:none;" >
+    <h2 class="tit_h2">
+      <a href="/PostList.naver?blogId=gaechuni&categoryNo=63&logCode=0"
+         class="link sp_after" onclick="nclk(this, 'pst.otherlist', '', '');">
+        <span class="td">이 블로그&nbsp;</span>
+        <span class="td tit"><strong class="ell">Unix system</strong></span>
+        <span class="td">&nbsp;카테고리 글</span>
+      </a>
+    </h2>
+
+    <div class="lst_w">
+      <div class="_flickingContainer _isNotTablet" id="_flickingContainer" style="overflow: hidden;">
+        <div class="_flickingScroll" id="_flickingScroll">
+          <div class="_category_post_list" id="_relatedCategoryPostListFlickingPage_0">
+          </div>
+        </div>
+      </div>
+      <div class="paginate _categoryPostListPagingBtnArea" style="display: none;">
+        <span class="btn_prev"><i class="sp_before">이전</i></span>
+        <a href="#" class="btn_prev _category_post_list_btn _returnFalse" onclick="nclk(this, 'pst.prev', '', '');" style="display:none"><i class="sp_before">이전</i></a>
+        <a href="#" class="btn_next _category_post_list_btn _returnFalse" onclick="nclk(this, 'pst.next', '', '');" style="display:none"><i class="sp_before">다음</i></a>
+        <span class="btn_next"><i class="sp_before">다음</i></span>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  <div id="_endPagePostRecommendArea" style="display:none;"></div>
+  
+</div>
+
+<div class="social_plugin_property" style="display:none">{&#034;title&#034;:&#034;Chapter 7. 시그널&#034;,&#034;source&#034;:&#034;https://blog.naver.com/gaechuni/221154760245&#034;,&#034;blogName&#034;:&#034;음성/오디..&#034;,&#034;blogId&#034;:&#034;gaechuni&#034;,&#034;logNo&#034;:221154760245,&#034;smartEditorVersion&#034;:3,&#034;meDisplay&#034;:true,&#034;lineDisplay&#034;:true,&#034;blogDisplay&#034;:true,&#034;outsideDisplay&#034;:false,&#034;cafeDisplay&#034;:true}</div>
+<div class="btn_top">
+	<a href="#" onclick="nclk(this, 'pst.top', '', '');"><span class="sp"></span> 맨 위로</a>
+</div>
+
+<div id="POST_VIEW_BOTTOM_WEB" class="btm_banner"></div>
+<div class="btn_pcver_area">
+	<a href="https://blog.naver.com/gaechuni/221154760245?viewType=pc" class="btn_pcver" onclick="nclk(this, 'pst.pcview', '', '');"><span class="sp ico_pc"></span>PC버전으로 보기</a>
+</div>
+
+	</div>
+	<div id="_loading2" class="rego_loading loading_end" style="display:none">
+        <div class="align"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+    </div>
+    
+  <div id="_div_categorylist" class="lyr_category_lst1" style="display:none;">
+    <div class="head">
+      <a href="#" class="btn_close _closeCategoryList"><span class="sp">닫기</span></a>
+      <div class="table">
+        <div class="td">
+          <h2 class="title" style="margin-left:50px;"><span class="ell">카테고리</span></h2>
+        </div>
+        <div class="td btn_area">
+          <a href="/gaechuni" class="btn_bloghome"><span class="sp"></span> 이 블로그 홈</a>
+        </div>
+      </div>
+    </div>
+    <ul id="_ul_categorylist" class="lst_t4"></ul>
+  </div>
+</div>
+
+<div id="ssp-adhead" class="head_ad_wrap is_hide">
+</div>
+
+
+  
+    
+    <div class="lst_t17 tablet_aside _relatedCategoryPostListArea"> <!-- 태블릿 가로로 볼 때 오른쪽 노출 -->
+      <h2 class="tit_h2">
+        <a href="/PostList.naver?blogId=gaechuni&categoryNo=63&logCode=0"
+           class="link sp_after" onclick="nclk(this, 'pst.otherlist', '', '');">
+          <span class="td">이 블로그&nbsp;</span>
+          <span class="td tit"><strong class="ell">Unix system</strong></span>
+          <span class="td">&nbsp;카테고리 글</span>
+        </a>
+      </h2>
+      <div class="lst_w">
+        <div class="_flickingContainer _flicking_tablet" id="_flickingContainer_tablet" style="overflow: hidden;">
+          <div class="_flickingScroll _flicking_tablet" id="_flickingScroll_tablet">
+            <ul class="_category_post_list" id="_relatedCategoryPostListFlickingPage_0_tablet">
+            </ul>
+          </div>
+        </div>
+        <div class="paginate _categoryPostListPagingBtnArea" style="display: none;">
+          <span class="btn_prev"><i class="sp_before">이전</i></span>
+          <a href="#" class="btn_prev _category_post_list_btn _returnFalse" onclick="nclk(this, 'pst.prev', '', '');" style="display:none"><i class="sp_before">이전</i></a>
+          <a href="#" class="btn_next _category_post_list_btn _returnFalse" onclick="nclk(this, 'pst.next', '', '');" style="display:none"><i class="sp_before">다음</i></a>
+          <span class="btn_next"><i class="sp_before">다음</i></span>
+        </div>
+      </div>
+    </div>
+    
+  
+  
+
+
+
+<div class="floating_menu" style="display: none;">
+  <div class="btn_area">
+    
+      <div class="btn_like_w">
+        <div class="btn_like">
+          
+          <div class="u_likeit_list_module _reactionModule" data-sid="BLOG" data-did="BLOG" data-cid="gaechuni_221154760245" data-catgid="post">
+            <a href="#" class="u_likeit_list_btn _button _sympathyBtn" style="line-height:44px" data-type="like" data-log="flo.like|flo.unlike" data-isHiddenZeroCount="false" _returnFalse>
+                <span class="u_ico _icon"></span>
+                <em class="u_cnt _count"></em>
+            </a>
+          </div>
+          
+        </div>
+        <a href="/SympathyHistoryList.naver?blogId=gaechuni&logNo=221154760245&categoryId=POST" class="btn_like_more"
+           onclick="nclk(this, 'flo.likemore', '', '');" style="display: none;"><span class="sp">공감한 사람 보러가기</span></a>
+      </div>
+    
+    <div class="btn_r">
+      
+        <a href="/CommentList.naver?blogId=gaechuni&logNo=221154760245" class="btn_reply"
+           onclick="nclk(this, 'flo.reply', '', '');">
+          <span class="sp ico">댓글</span> <em>0</em>
+        </a>
+      
+      <a href="#" class="naver-splugin btn_share _returnFalse" onclick="nclk(this, 'flo.share', '', '');"
+         data-style="standard"
+         data-url="https://m.blog.naver.com/gaechuni/221154760245"
+         data-title="Chapter 7. 시그널"
+         data-likeServiceId="BLOG"
+         data-likeContentsId="gaechuni_221154760245"
+         data-canonical-url="https://m.blog.naver.com/gaechuni/221154760245"
+         data-oninitialize="splugin_oninitialize();"
+         data-friend-display="on"
+         data-kakaostory-display="off"
+         data-prevent-short-url="on"><span class="sp ico" style="pointer-events:none">공유하기</span></a>
+    </div>
+  </div>
+</div>
+
+
+<div class="animation_like"></div>
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+
+
+
+
+<div class="lyr_add_buddy _buddyRecommendationLayer">
+    <div class="box">
+        <div class="writer_area">
+            <span class="dsc">
+                <strong class="nick"><span class="ell">Hidden Sound(gaechuni)</span></strong>
+                <span class="txt">님을 이웃추가하고 새글을 받아보세요</span>
+            </span>
+        </div>
+
+        <div class="btn_area">
+            <span class="btn"><a href="#"  class="_cancelBuddyRecommendation _returnFalse">취소</a></span>
+            <span class="btn add_buddy"><a href="#" class="_add_buddy_by_recommendation"><span class="sp"></span>이웃추가</a></span>
+        </div>
+    </div>
+</div>
+
+
+
+<div id="blogTeamBuddyRecommendationLayer" class="pop_lyr2 _blogTeamBuddyRecommendationLayer" style="display:none;">
+</div>
+<div id="mobileHappyBeanPopUpLayer" style="display:none;"></div>
+
+<script type="text/template" id="recommend_blogteam">
+<div class="dimmed">
+</div>
+<div class="lyr_cont">
+	<div class="lyr_add_buddy">
+		<div class="writer_area">
+			<span class="dsc">
+				<span class="thumb">
+               		<img src="{=profileImageUrl}" width="50" height="50" alt="섬네일">
+				</span>
+				<strong class="nick">첫 글 작성을 축하드려요!<br>블로그팀과 이웃도 맺어보실래요?</strong>
+			</span>
+		</div>
+		<a href="#" class="btn add_buddy _add_buddy _add_blogteam_buddy _param(blogpeople|true||/BuddyAddForm.naver) _returnFalse" onclick="nclk(this, 'bap.add','','');">이웃추가</a>
+		<a href="#" class="btn cancel _cancle_blogteam_buddy" onclick="nclk(this, 'bap.can','','');">취소</a>
+	</div>
+</div>
+</script>
+
+
+<script type="text/template" id="category_post_list_template">
+  <div class="wrap_postlist">
+  {for post in posts}
+    <div class="item _category_post_list_{=post.logNo}">
+      <div class="postlist {if logNo == post.logNo}visited{/if}">
+        <a href="/PostView.naver?blogId={=blogId}&logNo={=post.logNo}"
+           class="link" onclick="nclk(this, 'pst.other', '', '');timerStop();">
+          {if post.existThumbnail}
+          <div class="area_thumb">
+            <span class="thumb">
+              <span class="thumb_img" style="background-image:url({=post.encodedThumbnailUrl})"></span>
+              {if !post.marketPost && post.videoThumbnail}
+              <span class="ico_video sp">동영상</span>
+              {/if}
+              {if post.marketPost}
+                  <span class="icon_market">블로그 마켓</span>
+              {/if}
+            </span>
+          </div>
+          {/if}
+          <div class="area_text">
+            <strong class="title ell">{=post.title}</strong>
+            <div class="desc">
+              <span class="time">{=post.postAddDate}</span>
+                {if post.marketPost}
+                    {if post.postProductSummaryView.productStatus == "ON_SALE"}
+                         <span class="sale_on"><span class="bar"></span>판매중</span>
+                    {/if}
+                    {if post.postProductSummaryView.productStatus == "BE_SCHEDULED"}
+                        <span class="sale_before"><span class="bar"></span>판매예정</span>
+                    {/if}
+                    {if post.postProductSummaryView.productStatus == "SALE_END"}
+                         <span class="sale_end"><span class="bar"></span>판매종료</span>
+                    {/if}
+                {/if}
+            </div>
+          </div>
+          <div class="meta_foot">
+            {if post.sympathyEnable}
+            <div class="btn_like_post">
+              <!-- [D]  좋아요 시스템 -->
+              <div class="u_likeit_list_module">
+                <span class="u_likeit_list_btn">
+                  <span class="u_ico _icon"></span>
+                  <em class="u_txt _label">공감해요</em>
+                  <em class="u_cnt _count">{=post.formattedSympathyCount}</em>
+                </span>
+              </div>
+              <!-- //[D]  좋아요 시스템 -->
+            </div>
+            {/if}
+            {if post.commentEnable}
+            <span class="reply"><span class="sp">댓글</span> {=post.formattedCommentCount}</span>
+            {/if}
+          </div>
+        </a>
+      </div>
+    </div>
+  {/for}
+  </div>
+</script>
+
+
+
+<script type="text/template" id="category_post_list_tablet_template">
+    {for post in posts}
+    <li class="_category_post_list_{=post.logNo}">
+        <div class="lst_detail_t17 {if logNo == post.logNo}visited{/if}">
+            <a href="/PostView.naver?blogId={=blogId}&logNo={=post.logNo}"
+               class="link" onclick="nclk(this, 'pst.other', '', '');timerStop();">
+                {if post.existThumbnail}
+                <div class="thumb_area sp_before">
+                    <div class="thumb" style="background-image:url({=post.encodedThumbnailUrl})">
+                        {if post.marketPost}
+                            <span class="icon_market">블로그 마켓</span>
+                        {/if}
+                    </div>
+                </div>
+                {/if}
+                <div class="txt_area">
+                    <div class="txt_align">
+                        <div class="tit ell">
+                            {=post.title}
+                        </div>
+                        <div class="meta_data">
+                            <span class="td">
+                                <span class="ell">{=post.postAddDate}</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </li>
+    {/for}
+</script>
+
+
+
+<script type="text/template" id="mobileHappyBeanPopUpTpl">
+    <div class="g_dimmed _g_dimmed" style="display: block;"></div>
+    <div class="lyr_popup">
+        <div class="lyr_content">
+            <div class="lyr_service_guide">
+                <div class="happybean">
+                    <div class="title"><strong class="blind">블로그 글쓰기 완료! 해피빈 기부콩 1개를 받았습니다.</strong></div>
+                    <div class="img"><img src="{=imageUrl}" width="240" height="133" alt="숲을 만드는 반려나무 한 그루 입양하세요."></div>
+                </div>
+                <a href="{=linkUrl}" class="btn_detail" target="_blank" onclick="MobileHappyBeanPopUpHelper.onClickMoreKong('221154760245')">클릭하고 콩 1개 더 받기</a>
+                <div class="btn_area">
+                    <span class="td"><button class="btn_w100" onclick="MobileHappyBeanPopUpHelper.onClickCloseBtn('221154760245')">닫기</button></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</script>
+
+
+
+
+
+
+
+<script type="text/javascript" src="https://ssl.pstatic.net/t.static.blog/nmobile/versioning/LegoCommonJS1-48436828_https.js" charset="UTF-8"></script>
+<script type="text/javascript" src="https://ssl.pstatic.net/t.static.blog/nmobile/versioning/LegoCommonJS2-2066760524_https.js" charset="UTF-8"></script>
+<script type="text/javascript">
+jindo.m.patch("1.12.0").add({
+    "useTimingFunction" : function() {
+        var htOsInfo = jindo.m.getOsInfo();
+        if (htOsInfo.ios && parseInt(htOsInfo.version, 10) >= 6) {
+            return -1;
+        }
+    }
+});
+
+$Event.prototype.getEventElement = function(sTargetTagName, sTargetClassName, nMaxDepth) {
+	var el = this.element;
+	var wel = $Element(this.element);
+
+	var sTagName = 'a|button';
+	var sClassName = null;
+
+	var nDepth = typeof nMaxDepth == 'undefined' ? 5 : nMaxDepth;
+
+	if (typeof el.tagName == "undefined") return wel;
+	if (typeof sTargetTagName != "undefined") sTagName = sTargetTagName;
+	if (typeof sTargetClassName != "undefined") sClassName = sTargetClassName;
+
+	var oTagNameRegex = new RegExp("^(" + sTagName + ")$", "i");
+	if (oTagNameRegex.test(el.tagName) && (sClassName == null || wel.hasClass(sClassName))) {
+		return wel;
+	} else {
+		var welParents = wel.parent(function(v) {
+			if (v.$value().nodeType != 1) {
+				return false;
+			}
+
+			if (sTargetClassName) {
+				return oTagNameRegex.test(v.$value().tagName) && v.hasClass(sClassName);
+			}
+
+			return oTagNameRegex.test(v.$value().tagName);
+		}, nDepth);
+
+		return welParents != null && welParents.length > 0 ? welParents[0] : wel;
+	}
+}
+
+
+var doc = document.documentElement;
+doc.setAttribute('data-useragent',navigator.userAgent);
+
+var blogOwner = false;
+var rightClickOpenYn = false;
+var lcs_SerName = "lcs.naver.com";
+var isJeagleDebug = false;
+
+window.onerror = jeagleEyeUtil.nvl_error;
+</script>
+
+
+
+<script type="text/javascript">
+function ImageLazyLoader(selectors) {
+    this.selectors = selectors;
+    var info = $Element("_post_property");
+    this.editorVersion = info.attr("editorversion");
+}
+
+ImageLazyLoader.prototype.loadImages = function () {
+    if (this.editorVersion != "3" && this.editorVersion != "4") {
+        return;
+    }
+
+    var containers = jindo.$$(this.selectors);
+    $A(containers).forEach($Fn(function (element) {
+        this.loadImagesForEachContainer($Element(element));
+    }, this).bind())
+}
+
+ImageLazyLoader.prototype.loadImagesForEachContainer = function (postContentArea) {
+    $A(postContentArea.queryAll("img")).forEach($Fn(function (img) {
+        img.addClass("_lazy-loading-target-image");
+    }, this).bind())
+
+    var visible = new jindo.m.Visible(document, {
+        sClassName : "_lazy-loading-target-image",
+        nExpandSize : 1000
+    });
+
+    jindo.$Fn(function() {
+        visible.check(30);
+    }).attach(window, 'scroll').attach(window, 'resize').attach(window, 'touchend').attach(window, 'touchmove').attach(window, 'touchstart');
+
+    visible.attach({
+        'visible' : function(oCustomEvent) {
+            var welTarget = $Element(oCustomEvent.elTarget);
+            if(!welTarget.attr("data-lazy-src")){
+                return;
+            }
+            welTarget.attr("src", welTarget.attr("data-lazy-src"));
+            welTarget.attr("data-lazy-src", '');
+        }
+    });
+    visible.check();
+}
+
+$Fn(function() {
+    var imageLazyLoader = new ImageLazyLoader(".se-main-container,.__se_component_area");
+    imageLazyLoader.loadImages();
+
+}).attach(window, "DOMContentLoaded");
+</script>
+
+
+
+<script type="text/javascript">
+document.domain = 'naver.com';
+
+var nilOptions = {
+    devMode: "true"=="false"
+};
+
+
+if (BMR && BMR.run) {
+    BMR.run('https://sp.naver.com/sp');
+}
+
+
+$Element(window).attach("error", function() {
+    var oImgAndVideoHandler;
+    if (document.readyState == "complete") {
+        
+        oImgAndVideoHandler = new ImgAndVideoHandler(function(){}, isInApp);
+        oImgAndVideoHandler.loadOnError();
+    } else {
+        window.onload = function() {
+            oImgAndVideoHandler = new ImgAndVideoHandler(function(){}, isInApp);
+            oImgAndVideoHandler.loadOnError();
+        }
+    }
+});
+
+var gUrlMap = {
+    'PostCategoryListAsync' : '/rego/PostCategoryListAsyncTpl.naver',
+    'PostView' : '/PostView.naver',
+    'CommentList' : '/CommentList.naver', // AngularJS
+    'ScrapToBlog' : '/ScrapToBlog.naver',
+    'ScrapToCafe' : '/ScrapToCafe.naver',
+    'PostUpdateSetInfoForm' : '/PostUpdateSetInfoForm.naver',
+
+    'Login' : '/Login.naver',
+    'Logout' : '/Logout.naver',
+    'PostDelete' : '/PostDelete.naver',
+    'FirstWriterRecommendBuddyCheckAsync' : '/rego/FirstWriterRecommendBuddyCheckAsync.naver',
+    'PhotoViewer' : 'm.photoviewer.naver.com',
+
+    'PhotoOriginal' : 'https://blogfiles.pstatic.net',
+    'PhotoThumbnail' : 'https://mblogthumb-phinf.pstatic.net'
+};
+
+var blogId = "gaechuni";
+var bLoginUser = false;
+var gMCA = JSON.parse('{"mobileInAppType":"NOTINAPP","mobileBrowser":{"type":"UNDEFINED","version":0.0,"safari":false,"isAndroid":false,"androidGingerbread":false,"isDolfin":false,"dolfin":false,"isOpera":false,"opera":false,"android":false},"isNaverInApp":false,"blogAppInstallUrl":"http://m.naver.com/services.html","notInAppSafariOrAndroidBrowser":false,"naverServiceAppInstallUrl":"/services.html","marketPostUpdatableAppVersion":false,"lazyLoadableBrowser":false,"iOSMenuNavigationV2":false,"iOSMenuNavigationV1":false,"iOS7":false,"supportNaverExtension":true,"supportToolButton":false,"supportHappybeanWrite":false,"supportPostAlbumApp":false,"androidNewStyleAppVersion":false,"supportDaliyWrite":false,"supportBuddyAppPushAndBuddyInvitation":false,"supportVideoViewer":false,"stampEnabledAppVersion":false,"stampEnabledInBuddyListAppVersion":false,"supportReportInAndroid":false,"inAppYn":false,"isAndroidApp":false,"isIOSApp":false,"inAppVersion":"2.0.0"}');
+var gsPostTitle = "Chapter 7. 시그널 : 네이버 블로그";
+var gnCategoryNo = 63;
+
+var gsLocationOrigin = "https://m.blog.naver.com";
+var sStartLogNo = '221154760245';
+var sNavType = '';
+var sDirectorySeq = '';
+var sBuddyGroupId = '';
+
+var gLogNo = '221154760245';
+var isScrapPost = false;
+
+
+var readOnlyStatus = false;
+var readOnlyStatusAll = false;
+var readOnlyLinkErrorMsgMobile = '블로그 점검 중으로 기존 글 삭제 댓글 답글 공감 이웃추가 구독하기 새글OFF 그룹이동 기능이 제한됩니다.';
+
+
+
+
+var gBrowserType = "UNDEFINED";
+var inAppVersion = "2.0.0";
+var isInApp = false;
+var noSendToStat = false;
+var isSupportVideoViewer = false;
+
+var gbIsAfterWrite = false;
+
+var userId = "";
+var scrapedInfo = {
+		bMemo : false,
+		logNo : 0,
+		nOpenType : 2
+	};
+
+
+var gBannerListMapJson = '{\"POST_VIEW_BOTTOM_WEB\":[{\"bannerId\":100185,\"title\":\"PICK 4호 \",\"startDate\":1627969200000,\"startDateStr\":null,\"endDate\":1629039540000,\"endDateStr\":null,\"state\":2,\"targetOS\":1,\"targetDevice\":0,\"targetAppVersion\":\"\",\"targetSection\":\"q\",\"bannerType\":0,\"bannerImgUrl\":\"https:\/\/blogfiles.pstatic.net\/MjAyMTA4MDNfMTAx\/MDAxNjI3OTY5MjMyNDk2.oFOHN-_qtbiQQjLcc4sgppEqB2cU7MPUIP3pllnrohYg.Pb3yIw466Q5Bpe6TlvKMYE9GtjHTiToA-DLXPtyuCH8g.PNG.bloglabdefaultid\/%EB%B8%94%EB%A1%9C%EA%B7%B8MO%ED%95%98%EB%8B%A8_640x120_2_.png\",\"bannerText\":\"\",\"bannerLink\":\"https:\/\/campaign.naver.com\/blogpick\/?4\",\"nclickCode\":\"pst.bpromo\",\"addDate\":1627969234661,\"modiDate\":null,\"bannerBgcolor\":\"#FF494B\",\"encodedBannerText\":\"\",\"startDateFormatted\":\"2021\/08\/03 14:40\",\"endDateFormatted\":\"2021\/08\/15 23:59\",\"stateTypeValue\":\"ACTIVATE\",\"targetDeviceTypeValue\":\"ALL\",\"targetSectionDesc\":\"포스트보기하단-웹\",\"bannerTypeValue\":\"IMAGE\",\"encodedBannerImgUrl\":\"https%3A%2F%2Fblogfiles.pstatic.net%2FMjAyMTA4MDNfMTAx%2FMDAxNjI3OTY5MjMyNDk2.oFOHN-_qtbiQQjLcc4sgppEqB2cU7MPUIP3pllnrohYg.Pb3yIw466Q5Bpe6TlvKMYE9GtjHTiToA-DLXPtyuCH8g.PNG.bloglabdefaultid%2F%25EB%25B8%2594%25EB%25A1%259C%25EA%25B7%25B8MO%25ED%2595%2598%25EB%258B%25A8_640x120_2_.png\"},{\"bannerId\":100184,\"title\":\"PICK 4호 \",\"startDate\":1627969140000,\"startDateStr\":null,\"endDate\":1629039540000,\"endDateStr\":null,\"state\":2,\"targetOS\":1,\"targetDevice\":0,\"targetAppVersion\":\"\",\"targetSection\":\"q\",\"bannerType\":0,\"bannerImgUrl\":\"https:\/\/blogfiles.pstatic.net\/MjAyMTA4MDNfMTUz\/MDAxNjI3OTY5MTg5NjE1.h2GPFr85gUSJPG_mQV16TO_qe2lrPCA6oUH3YA6NKAQg.mSRQj9PH2DMq3LNthYjh7XNxasMUdU66UzM4AieyWj0g.PNG.bloglabdefaultid\/%EB%B8%94%EB%A1%9C%EA%B7%B8MO%ED%95%98%EB%8B%A8_640x120_1_.png\",\"bannerText\":\"\",\"bannerLink\":\"https:\/\/campaign.naver.com\/blogpick\/?4\",\"nclickCode\":\"pst.bpromo\",\"addDate\":1627969193044,\"modiDate\":null,\"bannerBgcolor\":\"#713DFF\",\"encodedBannerText\":\"\",\"startDateFormatted\":\"2021\/08\/03 14:39\",\"endDateFormatted\":\"2021\/08\/15 23:59\",\"stateTypeValue\":\"ACTIVATE\",\"targetDeviceTypeValue\":\"ALL\",\"targetSectionDesc\":\"포스트보기하단-웹\",\"bannerTypeValue\":\"IMAGE\",\"encodedBannerImgUrl\":\"https%3A%2F%2Fblogfiles.pstatic.net%2FMjAyMTA4MDNfMTUz%2FMDAxNjI3OTY5MTg5NjE1.h2GPFr85gUSJPG_mQV16TO_qe2lrPCA6oUH3YA6NKAQg.mSRQj9PH2DMq3LNthYjh7XNxasMUdU66UzM4AieyWj0g.PNG.bloglabdefaultid%2F%25EB%25B8%2594%25EB%25A1%259C%25EA%25B7%25B8MO%25ED%2595%2598%25EB%258B%25A8_640x120_1_.png\"},{\"bannerId\":100183,\"title\":\"블픽 보라이벤트\",\"startDate\":1627968780000,\"startDateStr\":null,\"endDate\":1628434740000,\"endDateStr\":null,\"state\":2,\"targetOS\":1,\"targetDevice\":0,\"targetAppVersion\":\"\",\"targetSection\":\"q\",\"bannerType\":0,\"bannerImgUrl\":\"https:\/\/blogfiles.pstatic.net\/MjAyMTA4MDNfMjE0\/MDAxNjI3OTY4ODYwMjMy.HORHks0rKDhSsE1ZtYtknZhSL0avtaiLFzHQyQCBhpog.XjRISirkWbUqKiPOUUoy3uFJzKt_CoVIemQFmWPOThIg.PNG.bloglabdefaultid\/%EB%B8%94%EB%A1%9C%EA%B7%B8MO%ED%95%98%EB%8B%A8_640x120_3_.png\",\"bannerText\":\"\",\"bannerLink\":\"https:\/\/blog.naver.com\/blogpeople\/222454062983\",\"nclickCode\":\"pst.bpromo\",\"addDate\":1627968868686,\"modiDate\":null,\"bannerBgcolor\":\"#FAE8FF\",\"encodedBannerText\":\"\",\"startDateFormatted\":\"2021\/08\/03 14:33\",\"endDateFormatted\":\"2021\/08\/08 23:59\",\"stateTypeValue\":\"ACTIVATE\",\"targetDeviceTypeValue\":\"ALL\",\"targetSectionDesc\":\"포스트보기하단-웹\",\"bannerTypeValue\":\"IMAGE\",\"encodedBannerImgUrl\":\"https%3A%2F%2Fblogfiles.pstatic.net%2FMjAyMTA4MDNfMjE0%2FMDAxNjI3OTY4ODYwMjMy.HORHks0rKDhSsE1ZtYtknZhSL0avtaiLFzHQyQCBhpog.XjRISirkWbUqKiPOUUoy3uFJzKt_CoVIemQFmWPOThIg.PNG.bloglabdefaultid%2F%25EB%25B8%2594%25EB%25A1%259C%25EA%25B7%25B8MO%25ED%2595%2598%25EB%258B%25A8_640x120_3_.png\"},{\"bannerId\":100173,\"title\":\"[블로그] 라이프로그 03\",\"startDate\":1626137640000,\"startDateStr\":null,\"endDate\":1630249140000,\"endDateStr\":null,\"state\":2,\"targetOS\":1,\"targetDevice\":0,\"targetAppVersion\":\"\",\"targetSection\":\"q\",\"bannerType\":0,\"bannerImgUrl\":\"https:\/\/blogfiles.pstatic.net\/MjAyMTA3MTNfMTUw\/MDAxNjI2MTM3NzMwOTU3.vbg3rowNa9rgijJgGJ9-_mcLUlgrRXD6d8e9hU-SlCAg.mw5wEvz8X8bb-nDDb7iSGfNP_f7J6ONBlknuVP1BktUg.PNG.bloglabdefaultid\/%EB%B8%94%EB%A1%9C%EA%B7%B8MO%ED%95%98%EB%8B%A8_640x120_%EC%84%9C%EC%97%B0_.png\",\"bannerText\":\"\",\"bannerLink\":\"https:\/\/campaign.naver.com\/lifelogblog\",\"nclickCode\":\"pst.bpromo\",\"addDate\":1626137733045,\"modiDate\":null,\"bannerBgcolor\":\"#FF00B5\",\"encodedBannerText\":\"\",\"startDateFormatted\":\"2021\/07\/13 09:54\",\"endDateFormatted\":\"2021\/08\/29 23:59\",\"stateTypeValue\":\"ACTIVATE\",\"targetDeviceTypeValue\":\"ALL\",\"targetSectionDesc\":\"포스트보기하단-웹\",\"bannerTypeValue\":\"IMAGE\",\"encodedBannerImgUrl\":\"https%3A%2F%2Fblogfiles.pstatic.net%2FMjAyMTA3MTNfMTUw%2FMDAxNjI2MTM3NzMwOTU3.vbg3rowNa9rgijJgGJ9-_mcLUlgrRXD6d8e9hU-SlCAg.mw5wEvz8X8bb-nDDb7iSGfNP_f7J6ONBlknuVP1BktUg.PNG.bloglabdefaultid%2F%25EB%25B8%2594%25EB%25A1%259C%25EA%25B7%25B8MO%25ED%2595%2598%25EB%258B%25A8_640x120_%25EC%2584%259C%25EC%2597%25B0_.png\"},{\"bannerId\":100172,\"title\":\"[블로그] 라이프로그 02\",\"startDate\":1626137580000,\"startDateStr\":null,\"endDate\":1630249140000,\"endDateStr\":null,\"state\":2,\"targetOS\":1,\"targetDevice\":0,\"targetAppVersion\":\"\",\"targetSection\":\"q\",\"bannerType\":0,\"bannerImgUrl\":\"https:\/\/blogfiles.pstatic.net\/MjAyMTA3MTNfMjQg\/MDAxNjI2MTM3Njg4MTU4.adXja96A9t9FNGh1QoZnHoLOMASjSY7P4Z4m64YHAKEg.NIrBnJjkBLKqHfdL5ARDxBGZcGz_VIrRFS_89HUsVlwg.PNG.bloglabdefaultid\/%EB%B8%94%EB%A1%9C%EA%B7%B8MO%ED%95%98%EB%8B%A8_640x120_%EB%8F%99%ED%98%84_.png\",\"bannerText\":\"\",\"bannerLink\":\"https:\/\/campaign.naver.com\/lifelogblog\",\"nclickCode\":\"pst.bpromo\",\"addDate\":1626137690120,\"modiDate\":null,\"bannerBgcolor\":\"#00BDAF\",\"encodedBannerText\":\"\",\"startDateFormatted\":\"2021\/07\/13 09:53\",\"endDateFormatted\":\"2021\/08\/29 23:59\",\"stateTypeValue\":\"ACTIVATE\",\"targetDeviceTypeValue\":\"ALL\",\"targetSectionDesc\":\"포스트보기하단-웹\",\"bannerTypeValue\":\"IMAGE\",\"encodedBannerImgUrl\":\"https%3A%2F%2Fblogfiles.pstatic.net%2FMjAyMTA3MTNfMjQg%2FMDAxNjI2MTM3Njg4MTU4.adXja96A9t9FNGh1QoZnHoLOMASjSY7P4Z4m64YHAKEg.NIrBnJjkBLKqHfdL5ARDxBGZcGz_VIrRFS_89HUsVlwg.PNG.bloglabdefaultid%2F%25EB%25B8%2594%25EB%25A1%259C%25EA%25B7%25B8MO%25ED%2595%2598%25EB%258B%25A8_640x120_%25EB%258F%2599%25ED%2598%2584_.png\"},{\"bannerId\":100171,\"title\":\"[블로그] 라이프로그 01\",\"startDate\":1626137400000,\"startDateStr\":null,\"endDate\":1630249140000,\"endDateStr\":null,\"state\":2,\"targetOS\":1,\"targetDevice\":0,\"targetAppVersion\":\"\",\"targetSection\":\"q\",\"bannerType\":0,\"bannerImgUrl\":\"https:\/\/blogfiles.pstatic.net\/MjAyMTA3MTNfMTM1\/MDAxNjI2MTM3NDk4OTA2.e1fVXBQR_TJE0NNIEB8ORIL9gtIGe6c7vPZUSc4m4ecg.MR-7JdfxQb3wNRxjPPgsdIDWx2HlD35wFS0U4xAAXZMg.PNG.bloglabdefaultid\/%EB%B8%94%EB%A1%9C%EA%B7%B8MO%ED%95%98%EB%8B%A8_640x120_%EC%A0%9C%EB%8B%88_.png\",\"bannerText\":\"\",\"bannerLink\":\" https:\/\/campaign.naver.com\/lifelogblog\",\"nclickCode\":\"pst.bpromo\",\"addDate\":1626137627066,\"modiDate\":null,\"bannerBgcolor\":\"#8510FF\",\"encodedBannerText\":\"\",\"startDateFormatted\":\"2021\/07\/13 09:50\",\"endDateFormatted\":\"2021\/08\/29 23:59\",\"stateTypeValue\":\"ACTIVATE\",\"targetDeviceTypeValue\":\"ALL\",\"targetSectionDesc\":\"포스트보기하단-웹\",\"bannerTypeValue\":\"IMAGE\",\"encodedBannerImgUrl\":\"https%3A%2F%2Fblogfiles.pstatic.net%2FMjAyMTA3MTNfMTM1%2FMDAxNjI2MTM3NDk4OTA2.e1fVXBQR_TJE0NNIEB8ORIL9gtIGe6c7vPZUSc4m4ecg.MR-7JdfxQb3wNRxjPPgsdIDWx2HlD35wFS0U4xAAXZMg.PNG.bloglabdefaultid%2F%25EB%25B8%2594%25EB%25A1%259C%25EA%25B7%25B8MO%25ED%2595%2598%25EB%258B%25A8_640x120_%25EC%25A0%259C%25EB%258B%2588_.png\"},{\"bannerId\":100124,\"title\":\"[블로그마켓] 마켓플레이스 2\",\"startDate\":1611824820000,\"startDateStr\":null,\"endDate\":1640962740000,\"endDateStr\":null,\"state\":2,\"targetOS\":1,\"targetDevice\":0,\"targetAppVersion\":\"\",\"targetSection\":\"q\",\"bannerType\":0,\"bannerImgUrl\":\"https:\/\/blogfiles.pstatic.net\/MjAyMTAyMDlfMzkg\/MDAxNjEyODU4OTg5OTYz.-75x5CpCBWaMFW79P5d2qEHhnR59NvNMcjotQTfpojog.cKUg8RTTwmKTzLIArWQ0dwXJsXk60Q6l_-ewARAuszUg.PNG.bloglabdefaultid\/blog_mw_640x120_01+%281%29.png\",\"bannerText\":\"\",\"bannerLink\":\"https:\/\/blog.naver.com\/blogpeople\/222237907099\",\"nclickCode\":\"pst.bpromo\",\"addDate\":1611824919531,\"modiDate\":1613452122900,\"bannerBgcolor\":\"#00C497\",\"encodedBannerText\":\"\",\"startDateFormatted\":\"2021\/01\/28 18:07\",\"endDateFormatted\":\"2021\/12\/31 23:59\",\"stateTypeValue\":\"ACTIVATE\",\"targetDeviceTypeValue\":\"ALL\",\"targetSectionDesc\":\"포스트보기하단-웹\",\"bannerTypeValue\":\"IMAGE\",\"encodedBannerImgUrl\":\"https%3A%2F%2Fblogfiles.pstatic.net%2FMjAyMTAyMDlfMzkg%2FMDAxNjEyODU4OTg5OTYz.-75x5CpCBWaMFW79P5d2qEHhnR59NvNMcjotQTfpojog.cKUg8RTTwmKTzLIArWQ0dwXJsXk60Q6l_-ewARAuszUg.PNG.bloglabdefaultid%2Fblog_mw_640x120_01%2B%25281%2529.png\"},{\"bannerId\":100123,\"title\":\"[블로그마켓] 마켓플레이스 1\",\"startDate\":1611824760000,\"startDateStr\":null,\"endDate\":1640962740000,\"endDateStr\":null,\"state\":2,\"targetOS\":1,\"targetDevice\":0,\"targetAppVersion\":\"\",\"targetSection\":\"q\",\"bannerType\":0,\"bannerImgUrl\":\"https:\/\/blogfiles.pstatic.net\/MjAyMTAyMDlfMTky\/MDAxNjEyODU5MDE1NDg1.FPl-R9EncuS-NfCjE8MCE8BThWway5Ze1sIEq7OGhM4g.gzSbYr8ft-nZEcRffI-UMpYfahABPF9zFPKcZo-icB8g.PNG.bloglabdefaultid\/blog_mw_640x120_02.png\",\"bannerText\":\"\",\"bannerLink\":\"https:\/\/blog.naver.com\/blogpeople\/222237907099\",\"nclickCode\":\"pst.bpromo\",\"addDate\":1611824844880,\"modiDate\":1613452116383,\"bannerBgcolor\":\"#00C497\",\"encodedBannerText\":\"\",\"startDateFormatted\":\"2021\/01\/28 18:06\",\"endDateFormatted\":\"2021\/12\/31 23:59\",\"stateTypeValue\":\"ACTIVATE\",\"targetDeviceTypeValue\":\"ALL\",\"targetSectionDesc\":\"포스트보기하단-웹\",\"bannerTypeValue\":\"IMAGE\",\"encodedBannerImgUrl\":\"https%3A%2F%2Fblogfiles.pstatic.net%2FMjAyMTAyMDlfMTky%2FMDAxNjEyODU5MDE1NDg1.FPl-R9EncuS-NfCjE8MCE8BThWway5Ze1sIEq7OGhM4g.gzSbYr8ft-nZEcRffI-UMpYfahABPF9zFPKcZo-icB8g.PNG.bloglabdefaultid%2Fblog_mw_640x120_02.png\"}]}';
+
+
+var gdid = "90000003_00000000000000337DD9D635";
+var lcsUrl = "https://m.blog.naver.com/PostView.naver?blogId=gaechuni&logNo=221154760245";
+var lcsUrlBase = "https://m.blog.naver.com/PostView.naver?blogId=gaechuni&logNo=221154760245";
+var buddyController = null;
+var gfMarketUrl = "http://m.gfmarket.naver.com";
+var gsPlaceSnippetApiUrl ="https://m.blog.naver.com/placeapi/api/v1/opens/cocoa-api/api.nhn";
+var gnMaxNoticePostCount = 5;
+
+var isWritedByApp = false;
+
+var isWritedByMobileWeb = false;
+
+
+var exposeRecommend = true;
+var keywordSearchType = "TEXT";
+
+var isPostViewExposeCheck = true;
+
+var isTabletRelatedPostListExposeTarget = true;
+
+var targetBlogId = "gaechuni";
+var targetLogNo = "221154760245";
+var targetExcludeLogNo = "221154760245";
+var targetRecommendationCode = "1";
+var targetKeyword = "";
+//#feedrollback
+var isVisitTimeOn = false;
+var isNilAnalystLeaveEvent = "true";
+
+var angularConfig = {"isDev":false,"staticResourceUrl":"https://ssl.pstatic.net/t.static.blog","lcsUrl":"lcs.naver.com","revision":"cf81908","jeagleEyeDebug":false,"deployPhase":"release","usainOn":false,"countryCode":"NONE","usainUrl":"https://usain.blog.naver.com","isInApp":false,"isAndroidApp":false,"isIOSApp":false,"inAppScheme":"naverblog://blogapp","inAppVersion":"2.0.0"};
+var ngReadOnlyStatus = {"isReadOnly":false,"startTime":null,"endTime":null,"reason":null,"usageTip":null,"maintenanceType":null};
+var urlMap = {"commonStat":"https://blog.stat.naver.com","likeit":"https://blog.like.naver.com","ugcmarketthumb":"https://ugcmk-phinf.pstatic.net","nmobile":"https://m.blog.naver.com","module_guestbook":"https://api-guestbook.blog.naver.com","pay":"https://new-m.pay.naver.com","section":"https://section.blog.naver.com","dthumb":"https://dthumb-phinf.pstatic.net/?src=","gfmarket_mobile":"http://m.gfmarket.naver.com","naverCommentApiUrl":"https://apis.naver.com/commentBox/cbox9","blog":"https://blog.naver.com","spi":"https://ssl.pstatic.net/spi","naver_openmain":"https://openmain.pstatic.net","blogprofilethumb":"https://blogpfthumb-phinf.pstatic.net","guestbook":"https://guestbook.blog.naver.com","gfmarket_thumb":"https://storep-phinf.pstatic.net","mobileNaver":"http://m.naver.com","mobilemovieplayer":"https://sstatic-rmcnmv.pstatic.net","ogcrawler":"https://ogcrawler.editor.naver.com","sellerBlog":"https://seller.blog.naver.com","https_nmobile":"https://m.blog.naver.com","naverCommentStaticUrl":"https://ssl.pstatic.net/static.cbox","module_moment":"https://api-moment.blog.naver.com"};
+var zookeeper = {"value":{"feed.thumbnail.display.percent":"on","anigif.display.percent":"on"},"onoff":{"guestbook.module.dummy.type":"on","mobile.home.video.view":"on"},"option":{"istestid":"false"}};
+
+var gsCategoryName = "Unix system";
+var gsBlogOwnerYn = gsBlogOwnerYn? "Y" : "N";
+var gsTagName = "";
+var gsSessionId = "DE3DE77E18F38858616F9A6A7BD599C3.jvm1";
+var editorViewerUrl = "https://editor-static.pstatic.net/v/basic/1.25.0/se.viewer.js?v=1.25.0-20210528184231";
+var blogPipUrl = "https://ssl.pstatic.net/t.static.blog/nmobile/versioning//js/lego/pip/blog-pip-ca0ceab_https.js";
+var imageViewerUrl = "https://ssl.pstatic.net/t.static.blog/nmobile/versioning//js/lego/photoviewer/image-viewer.min-d0f14a8_https.js";
+var thumbnailPercent = "100";
+var searchVid = "";
+var rproductId = '';
+var gSeVersion = 3;
+var gsAdvertiseKeyword = "";
+var gsSaInfo = "";
+var videoInfraSid = 2;
+var isDevPhase = "false";
+var isStagePhase = "false";
+var postAdvertiseEnableYN = true;
+var openType = 2;
+var sellerNo = '0';
+var hasProduct = 'false' === 'true';
+var temporaryStopSeller = 'false' === 'true';
+var leaveRequestSeller = 'false' === 'true';
+var tradeInterruptionSeller = 'false' === 'true';
+var feEnv = 'real';
+var productList = JSON.parse('[]');
+var feMobileUrl= "https://fe-m.blog.naver.com";
+var blogModuleJs= "https://ssl.pstatic.net/t.static.blog/nmobile/versioning//common/js/post/market/blogModule-13c9392_https.js";
+var firstThumbnailUrlPath = '';
+var productCount = '0';
+
+$Element(window).attach("load", function (event) {
+    setTimeout(
+        function() {
+            postViewController = new PostViewController(blogId, sStartLogNo, sNavType, "false", ""
+                , "https://ssl.pstatic.net/spi/js/release/ko_KR/splugin.m.js?"
+                , "https://openapi.map.naver.com/openapi/openapi_v23.js"
+                , "https://sstatic-rmcnmv.pstatic.net/js/webplayer_4.24.6.all.265d3888.min.js"
+                , "false", "63", "", 0, isNilAnalystLeaveEvent
+				, "https://cloud.naver.com", editorViewerUrl, blogPipUrl, imageViewerUrl
+                , "https://apis.naver.com/", true, '{}', '[]',
+                videoInfraSid, isDevPhase, isStagePhase, rproductId, hasProduct, temporaryStopSeller, leaveRequestSeller, "naver", tradeInterruptionSeller);
+            
+            postViewController.setFocusVideoId(searchVid);
+            postViewController.start();
+            
+
+            
+            new ProductController(
+                blogId,
+                userId,
+                gLogNo,
+                sellerNo,
+                hasProduct,
+                productList,
+                feEnv,
+                firstThumbnailUrlPath,
+                productCount
+            );
+
+            sympathyEventHandler = new SympathyEventHandler();
+            try {
+                postViewController.sendVisitTime(isVisitTimeOn, blogId, userId);
+                lazyVersioningLoader.loadJs(
+                    "https://blog.like.naver.com/js/reaction/dist/reaction.min.js?20210805",
+                    function() {
+                        reaction.init({
+                            type: "basic"
+                            , cssId: "blog"
+                            , domain: "https://blog.like.naver.com"
+                            , isMobile: true
+                            , maxCount: 99999
+                            , isHiddenZeroCount: false
+                            , highlightCount : 50
+                            , highlightClassname : "double_heart"
+                            , callback : {
+                                <!-- 공감 더보기 버튼이 공감 데이터가 동기화 된 이후에 동작하도록 하기 위해서 추가 -->
+                                updated : function (param) {
+                                    sympathyEventHandler.bindMoreBtn();
+                                },
+                                <!-- 좋아요가 실패하면 콜백함수가 실행되지 않으므로 success검사를 하지 않아도 된다 -->
+                                clicked : function oPostHandler(param) {
+                                    var callbackData = param.content;
+                                    if(typeof callbackData != "undefined"){
+                                        sympathyEventHandler.sympathyEvent(callbackData.isReacted, callbackData.count);
+                                    }
+                                }
+                            }
+                        })
+                    }
+                );
+                lazyVersioningLoader.loadJs("https://ssl.pstatic.net/adimg3.search/adpost/js/ad.js");
+                if (false) {
+					var sspAdPostCaller = new SspAdPostCallerForMobile();
+                    sspAdPostCaller.renderAdPostDiv(blogId,
+                        gLogNo,
+                        gdid,
+                        gsBlogOwnerYn,
+                        gsAdvertiseKeyword,
+                        gsTagName,
+                        gsCategoryName,
+                        gsSessionId,
+                        'm_blog_bottom',
+                        'ssp-adpost',
+                        false,
+                        "0"
+                    );
+				}
+
+                
+                if (false) {
+                    var sspAdContentCaller = new SspAdContentCallerForMobile();
+                    sspAdContentCaller.renderAdContent(blogId,
+                        gLogNo,
+                        gdid,
+                        gsBlogOwnerYn,
+                        gsAdvertiseKeyword,
+                        gsTagName,
+                        gsCategoryName,
+                        gsSessionId,
+                        'm_blog_body',
+                        'm_blog_body_2nd',
+                        'm_blog_head',
+                        'ssp-adcontent',
+                        'ssp-adda',
+                        'ssp-adhead',
+                        "0"
+                    );
+                }
+            } catch (e) {}
+        }, 0);
+
+
+        new BannerController(new BannerView(), new BannerModel(), isAndroidBrowser, false, "2.0.0").start();
+        new BlogAppAdController().start();
+
+        buddyController = new BuddyController("gaechuni");
+        buddyController.start();
+
+        
+
+        lcs_do_gdid(gdid, lcsUrl);
+        new RclickUtility().checkRClickYN(rightClickOpenYn, blogOwner);
+
+        lazyVersioningLoader.lazyJsLoader({
+            _ngbundle : function() {
+                angular.bootstrap($$.getSingle('._ngApp'), ['bgPostViewApp'], {
+                    strictDi: true
+                });
+            }
+        });
+});
+
+function lazyViewLoadForCallback(){
+    postViewController.lazyViewLoad();
+}
+
+function timerStop(){
+	postViewController.timerStop();
+}
+</script>
+
+
+<div class="_lazyLoadingList" _groupname="_ngbundle" _order="0" style="display:none"><!--/**https://ssl.pstatic.net/t.static.blog/nmobile/versioning/NgPostViewBundle-783911729_https.js**/--></div>
+
+
+<script type="text/javascript" src="https://ssl.pstatic.net/t.static.blog/nmobile/versioning/LegoPostView-1112794120_https.js" charset="UTF-8"></script>
+<script type="text/javascript" src="https://ssl.pstatic.net/t.static.blog/nmobile/versioning//common/js/nil.blog.new-4fb4153_https.js"></script>
+<script type="text/javascript" src="https://ssl.pstatic.net/t.static.blog/nmobile/versioning//js/lego/sympathy/lottie/5.5.8/lottie.min-0e23629_https.js"></script>
+
+
+
+
+
+<script type="text/javascript">
+
+var safariBrowser = "SAFARI";
+var safariIpadBrowser = "SAFARI_IPAD";
+var androidBrowser = "ANDROID";
+var androidGalTabBrowser = "ANDROID_GALTAB";
+var androidHoneyCombBrowser = "ANDROID_HONEYCOMB";
+var dolfinBrowser = "DOLFIN";
+var operaBrowser = "OPERA";
+
+
+var gBrowserType = "UNDEFINED";
+var gBrowserVersion = "0.0";
+var isSafariBrowser = (gBrowserType == safariBrowser || gBrowserType == safariIpadBrowser);
+var isIos4xSafariBrowser = isSafariBrowser && (navigator.userAgent.match(/OS 4_3/i)) ? true : false;
+var isIos5xSafariBrowser = isSafariBrowser && (navigator.userAgent.match(/OS 5/i)) ? true : false;
+var isAndroidBrowser = (gBrowserType == androidBrowser) || (gBrowserType == androidGalTabBrowser) || (gBrowserType == androidHoneyCombBrowser);
+var isAndroid4xBrowser = isAndroidBrowser && (navigator.userAgent.match(/Android 4./i)) ? true : false;
+var isAndroid5xBrowser = isAndroidBrowser && (navigator.userAgent.match(/Android 5./i)) ? true : false;
+var isBelowAndroid5xBrowser = isAndroid4xBrowser || isAndroid5xBrowser;
+var isAndroidGingerbread = false;
+var isDefaultTextSupportingBrowserType = false;
+var gIsNotInAppSafariOrAndroidBrowser = false;
+var isSBrowser = (navigator.userAgent.match(/SamsungBrowser/i)) ? true : false;
+
+
+
+var gDeployPhase = ""; 
+
+var ReloadFile=(function(){var d=2500;var b={};var h={};var c=5;function k(o){var n=o.split(/\/+/g);var p=n[n.length-1].split("?")[0].split(".")[0];return p}function a(){var n=document.getElementsByTagName("script");for(var p=0;p<n.length;p++){var q=n[p].src;if(q!=""&&q.toLowerCase().indexOf("lazyloading")<0&&(q.toLowerCase().indexOf("blog.naver.com")>-1||q.toLowerCase().indexOf("blog.naver.net")>-1)){var o=k(q);var r=o+"_js";n[p].id=r;f(r,c);l(r,q)}}}function g(){var n=document.getElementsByTagName("link");for(var p=0;p<n.length;p++){var r=n[p].href;var q=n[p].type;if("text/css"==q.toLowerCase()&&r!=""&&r.toLowerCase().indexOf("lazyloading")<0&&(r.toLowerCase().indexOf("blog.naver.com")>-1||r.toLowerCase().indexOf("blog.naver.net")>-1)){var o=k(r);var s=o+"_css";n[p].id=s;f(s,c);e(s,r)}}}function l(q,o){i(q);if((typeof window.defineNHNJS=="undefined"||typeof window.defineNHNJS[q]=="undefined")&&b[q].retry++<b[q].maxRetry){var n=document.getElementById(q);var p=document.createElement("script");p.type="text/javascript";p.id=n.id;p.charset=n.charset;p.src=o+"?"+new Date().getTime()+"_"+Math.floor(Math.random()*100)+1;n.parentNode.removeChild(n);document.getElementsByTagName("body")[0].appendChild(p);m(q,function(){l(q,o)})}}function m(o,n){if(b[o].maxRetry>1){h[o]=setTimeout(n,d)}}function f(o,n){b[o]={retry:0,maxRetry:n||1}}function i(n){if(typeof h[n]!="undefined"){clearTimeout(h[n]);h[n]=null}}function e(o,n){document.addEventListener("DOMContentLoaded",function(){j(o,n)},false)}function j(u,q){i(u);if(b[u].retry++<b[u].maxRetry){var t="defineNHNCSS_"+u;var s=document.getElementById(t);if(!s){var n=document.createElement("div");n.id=t;n.style.display="none";document.body.appendChild(n);s=document.getElementById(t)}var o=document.defaultView.getComputedStyle(s,"").getPropertyValue("color");if(o=="rgb(0, 0, 0)"){var p=document.getElementById(u);var r=document.createElement("link");r.rel="stylesheet";r.type="text/css";r.id=p.id;r.charset=p.charset;r.href=q+"?"+new Date().getTime()+"_"+Math.floor(Math.random()*100)+1;p.parentNode.removeChild(p);document.getElementsByTagName("body")[0].appendChild(r);m(u,function(){j(u,q)})}}}return{js:function(n){try{if(n==null||n=="local"){return}a()}catch(o){}},css:function(n){try{if(n==null||n=="local"){return}g()}catch(o){}}}})();if((isSafariBrowser||isAndroidBrowser)&&typeof gDeployPhase!="undefined"&&gDeployPhase!=""){if(window.attachEvent){window.attachEvent("onload",function(){ReloadFile.js(gDeployPhase)})}else{window.addEventListener("load",ReloadFile.js(gDeployPhase),false)}ReloadFile.css(gDeployPhase)};
+</script>
+
+
+
+    <script type="text/javascript" src="https://ssl.pstatic.net/t.static.blog/nmobile/versioning/Sentry-236805508_https.js" charset="UTF-8"></script>
+
+    <script>
+        Sentry.init({ dsn: "https://26ca49eda579486c977c92a8b0f2df7e@sentry-apollo.naver.com/9",
+        environment: "mobile",
+        sampleRate: 1.0
+        });
+    </script>
+
+</body>
+</html>
