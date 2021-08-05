@@ -33,7 +33,8 @@ int main(void){
 
     sigemptyset(&act.sa_mask);
     sigaddset(&act.sa_mask, SIGQUIT); //시그널 핸들러가 동작하는 중에 SIGQUIT 시그널을 블록하기 위해 sa_mask에 SIGQUIT 시그널을 설정한다.
-    act.sa_flags = 0; //sa_flags에는 아무 플래그도 지정하지 않는다.(sa_flags는 시그널 전달 방법을 수정할 플래그를 지정함)
+    act.sa_flags = 0; //sa_flags에는 아무 플래그도 지정하지 않는다.(sa_flags는 시그널 전달 방법을 수정할 플래그를 지정함) SA_RESETHAND 플래그를 지정하면 시그널 핸들러가 한 번 호출된 후에
+    //시그널 처리 방법이 기본 처리 방법(SIG_DFL)으로 재설정된다.
     act.sa_handler = handler; //핸들러 지정
     if(sigaction(SIGINT,&act,(struct sigaction *)NULL)<0){ //sigaction(int sig, const struct sigaction *restrict act,struct sigaction *restrict oact);
     //sig: 처리할 시그널, act: 시그널을 처리할 방법을 지정한 구조체 주소,oact 기존에 시그널을 처리하던 방법을 저장할 구조체 주소
