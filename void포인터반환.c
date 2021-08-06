@@ -7,7 +7,7 @@ void *allocMemory()    // void 포인터를 반환하는 allocMemory 함수 정�
 {
     void *ptr = malloc(100);    // 100바이트만큼 동적 메모리 할당
 
-    //return ptr;    // void 포인터 반환
+    return ptr;    // void 포인터 반환
     //return malloc(100) 한번에 가능
 }
 
