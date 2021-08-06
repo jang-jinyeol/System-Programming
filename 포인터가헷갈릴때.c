@@ -27,10 +27,13 @@ int main()
     printf("%d\n", *numPtr+1); //[0][1]
     printf("%d\n", *((*numPtr)+1));
 
-    //다 같은 표현
+    //연산순서로 인하여 다 같은 표현 asterisk 먼저 연산
     printf("%p\n", numArr+1);
     printf("%p\n", (*numArr)+4);
     printf("%p\n", *numArr+4);
     
+     printf("%p\n", (*numArr)+4);
+     printf("%d\n", *((*numArr)+4)); //[1][0]의 값
+     printf("%d\n", **numArr+4); //연산순서로 인하여 [0][0] 값에 4를 더한 값
     return 0;
 }
