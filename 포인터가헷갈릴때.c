@@ -24,9 +24,13 @@ int main()
     printf("%d\n", sizeof(numPtr));  // 4 : sizeof로 2차원 배열 포인터의 크기를 
                                      // 구하면 포인터의 크기가 출력됨(64비트라면 8)
 
-
+    printf("%d\n", *numPtr+1); //[0][1]
     printf("%d\n", *((*numPtr)+1));
 
-
+    //다 같은 표현
+    printf("%p\n", numArr+1);
+    printf("%p\n", (*numArr)+4);
+    printf("%p\n", *numArr+4);
+    
     return 0;
 }
