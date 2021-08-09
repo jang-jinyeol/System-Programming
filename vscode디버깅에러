@@ -7,3 +7,9 @@ launch.json
             "sourceFileMap": {
                 "/build/glibc-S9d2JN": "/usr/src/"
             },
+/usr/src/glibc 위치 주의
+
+configure를 ./configure 처럼 실행시키지 마시고, build 디렉토리에서 실행하세요. 예를 들어, /root/glibc-2.3.3 에 소스를 풀었다면 /root/glibc-2.3.3/build 를 만드시고,
+
+$ cd build
+$ ../configure (상위 디렉토리의 configure를 실행)
