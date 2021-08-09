@@ -1,0 +1,9 @@
+$ sudo apt install glibc-source
+$ cd /usr/src/glibc
+$ sudo tar xvf glibc-2.27.tar.xz
+
+launch.json
+
+            "sourceFileMap": {
+                "/build/glibc-S9d2JN": "/usr/src/"
+            },
