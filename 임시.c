@@ -1,3 +1,5 @@
+//ipcrm -m shmid (제거)
+
 #include <signal.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -34,7 +36,6 @@ while (1) {
 
 void signalHandler(int signum) {
     struct shmid_ds buf;
-    printf("함수호출!\n");
 
     if (signum == SIGINT) {
         shmdt(shmaddr);
@@ -56,13 +57,13 @@ void myfunc(void) {
     printf("Send: %d\n", data);
 
     shmctl(shmid, IPC_STAT, &buf);
-    kill(buf.shm_lpid, SIGUSR1);
+
+    kill(buf.shm_lpid, SIGUSR1);//마지막으로 shmop 동작을 한 프로세스의 ID다. 여기선 클라이언트의 ID
 
 }
+/*
+클라이언트 부분
 
-
------------
-    
     #include <signal.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -89,7 +90,7 @@ int main(int argc, char const *argv[]) {
     shmid = shmget(mykey, MAX_SHM_SIZE, IPC_CREAT);
     shmaddr = (int*)shmat(shmid, NULL, 0);
 signal(SIGUSR1, signalHandler);
-
+signal(SIGINT, signalHandler);
     while (1) {
         printf("<< ");
         scanf("%d", &data);
@@ -99,8 +100,9 @@ signal(SIGUSR1, signalHandler);
 
         memcpy(shmaddr, &data, sizeof(int));
         shmctl(shmid, IPC_STAT, &buf);
-        kill(buf.shm_cpid, SIGUSR1);
-
+        printf("%d\n", buf.shm_cpid);
+        kill(buf.shm_cpid, SIGUSR1);//공유메모리를 생성한 프로세스의 id 즉, 서버에게 시그널을 보낸다.
+    
         pause();
     }
 
@@ -114,4 +116,12 @@ void signalHandler(int signum) {
         memcpy(&data, shmaddr, sizeof(int));
         printf(">> %d\n", data);
     }
+       if (signum == SIGINT) {
+        shmdt(shmaddr);
+        shmctl(shmid, IPC_RMID, NULL);
+        exit(0);
+    }
 }
+
+*/
+
