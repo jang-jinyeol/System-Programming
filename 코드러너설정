@@ -1,0 +1,9 @@
+code runner에서 컴파일러 설정
+File -> Preferences ->Settings
+Executor Map
+"cpp": "cd $dir && g++ --std=c++17 $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+
+code runner에서 입력 받기
+code runner terminal
+왼쪽에 목록에 Extensions
+체크
