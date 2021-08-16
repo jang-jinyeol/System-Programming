@@ -2,6 +2,7 @@
 #include<string.h>
 #include<stdlib.h>
 #include<fcntl.h>
+#include<unistd.h>
 int main( )
 {
  int fd1, fd2, fd3;
