@@ -1,0 +1,26 @@
+이 글은 nodejs 설치시에 발생된 에러들입니다.
+E: Could not get lock /var/lib/dpkg/lock-frontend - open (11: Resource temporarily unavailable)
+E: Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), is another process using it?
+
+ 
+
+위 에러를 아래와 같이 해결했습니다.
+
+우선 터미널 여시고 모든 프로세스를 죽여줍니다~!
+1) sudo killall apt apt-get
+
+만일 진행중인 프로세스가 없다라고 뜨면, 아래와 같이 하나하나씩 디렉토리를 삭제해주세요.
+
+- sudo rm /var/lib/apt/lists/lock
+- sudo rm /var/cache/apt/archives/lock
+- sudo rm /var/lib/dpkg/lock*
+
+sudo dpkg --configure -a  를 하시고 sudo apt update
+
+완벽히 해결이 되네요 ^^ 
+
+구글링이 최고입니다!
+
+
+
+출처: https://kgu0724.tistory.com/71 [병아리 개발자의 이야기]
